@@ -1,0 +1,84 @@
+.barra-navegacion {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+
+    .contenido-barra-navegacion {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: blue;
+
+        .div-logo {
+            display: flex;
+            flex-direction: row;
+
+            .logo-img {
+                height: 55px;
+                width: auto;
+            }
+
+            .logo-link {
+
+                text-decoration: none;
+
+                h1 {
+                    margin: 0;
+                    line-height: 60px;
+                    font-size: 24px;
+                    color: white;
+				    height: 100%;
+                    text-decoration: none;
+                    font-family: "Pacifico";
+                }
+            }
+        }
+
+        .Collapsible {
+            .boton-navegacion {
+                margin-top: auto;
+                margin-right: 10px;
+                cursor: pointer;
+
+                .fa.fa-bars {
+                    color: white;
+                    font-size: 48px;
+                    width: 55px;
+                    height: 55px;
+                    text-align: center;
+                    line-height: 55px;
+                }
+            }
+
+            .Collapsible__contentOuter {
+                position: fixed;
+                top: 60px;
+                left: 0px;
+                width: 100%;
+                background-color: blue;
+            }
+
+            .div-navegacion {
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+
+                .nav-link {
+                    margin: auto;
+                    text-align: center;
+                    font-size: 28px;
+                    font-family: 'Open Sans';
+                    color: white;
+                    text-decoration: none;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
