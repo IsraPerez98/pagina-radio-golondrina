@@ -17,13 +17,10 @@ $color-fondo: #191b1c;
 .barra-navegacion {
     width: 100%;
     height: 60px;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     background-color: $color-fondo;
     margin-bottom: 40px;
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
 
     .contenido-barra-navegacion {
         width: 100%;
@@ -38,7 +35,8 @@ $color-fondo: #191b1c;
             margin-left: 10px;
 
             .logo-img {
-                height: 55px;
+                margin: auto;
+                height: 40px;
                 width: auto;
             }
 
@@ -49,7 +47,7 @@ $color-fondo: #191b1c;
                 h1 {
                     margin: 0;
                     line-height: 60px;
-                    font-size: 24px;
+                    font-size: 16px;
                     color: white;
                     height: 100%;
                     text-decoration: none;
@@ -63,17 +61,17 @@ $color-fondo: #191b1c;
             margin-left: auto;
 
             .boton-navegacion {
-                margin-top: auto;
+                margin-top: 15px;
                 margin-right: 10px;
                 cursor: pointer;
 
                 .fa.fa-bars {
                     color: white;
-                    font-size: 48px;
-                    width: 55px;
-                    height: 55px;
+                    font-size: 32px;
+                    width: 35px;
+                    height: 35px;
                     text-align: center;
-                    line-height: 55px;
+                    line-height: 35px;
                 }
             }
 
@@ -110,6 +108,59 @@ $color-fondo: #191b1c;
             margin: 0;
         }
 
+    }
+}
+
+@media (min-width: 320px) {
+    .barra-navegacion {
+        .contenido-barra-navegacion {
+            .div-logo {
+                
+                .logo-img {
+                    height: 55px;
+                }
+                
+                .logo-link {
+                    h1 {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .Collapsible {    
+                .boton-navegacion {
+                    margin-top: 5px;
+                    margin-right: 10px;
+    
+                    .fa.fa-bars {
+                        color: white;
+                        font-size: 42px;
+                        width: 45px;
+                        height: 45px;
+                        text-align: center;
+                        line-height: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 375px) {
+    .barra-navegacion {
+        .contenido-barra-navegacion {
+            .div-logo {
+                
+                .logo-img {
+                    height: 55px;
+                }
+                
+                .logo-link {
+                    h1 {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
     }
 }
 
