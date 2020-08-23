@@ -9,6 +9,38 @@ import favicon from "../../img/favicon.png";
 import '../../css/componentes/barra-navegacion.scss';
 
 class BarraNavegacion extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            collapsible_open: false,
+        };
+
+        this.cerrarCollapsible = this.cerrarCollapsible.bind(this);
+        this.abrirCollapsible = this.abrirCollapsible.bind(this);
+    }
+
+    cerrarCollapsible() {
+        this.setState({
+            collapsible_open: false,
+        });
+    }
+
+    abrirCollapsible() {
+        this.setState({
+            collapsible_open: true,
+        })
+    }
+
+    componentDidMount() {
+        document.addEventListener('mousedown', this.cerrarCollapsible);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('mousedown', this.cerrarCollapsible);
+    }
+
     render() {
         return(
             <div className="barra-navegacion">
@@ -29,6 +61,8 @@ class BarraNavegacion extends Component {
                                 <span className="fa fa-bars"></span>
                             </div>
                         }
+                        open = {this.state.collapsible_open}
+                        handleTriggerClick = {this.abrirCollapsible}
                     >
                         <NavLinks/>
                     </Collapsible>
