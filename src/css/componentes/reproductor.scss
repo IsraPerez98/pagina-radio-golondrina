@@ -1,0 +1,120 @@
+.reproductor{
+    position: sticky;
+    display: flex;
+    height: 80px;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    align-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    .reproductor-interior {
+        width: 95%;
+        height: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .reproductor-div-izquierda {
+            width: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            .suena-ahora {
+                font-family: 'Open Sans';
+                font-size: 12px;
+                color: white;
+            }
+
+            .nombre-programa {
+                font-family: 'Open Sans';
+                font-size: 14px;
+                color: white;
+            }
+        }
+
+        .reproductor-div-centro {
+            width: 60px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-items: center;
+
+            .boton-play {
+                margin: auto;
+                height: 60px;
+                width: 60px;
+                background: none;
+				border-radius: 8px;
+				border: 0;
+				outline: 0;
+                cursor: pointer;
+                
+                &:before {
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    font-family: 'FontAwesome';
+                    color: white;
+					line-height: 60px;
+					font-size: 58px;
+					margin: 0px;
+                }
+
+                &.play:before {
+                    content: "\f144";
+                }
+
+                &.stop:before {
+                    content: "\f04c";
+                }
+            }
+        }
+
+        .reproductor-div-derecha {
+            width: 90px;
+            display: flex;
+            flex-direction: row;
+
+            .boton-mute {
+                height: 30px;
+                width: 30px;
+                margin: auto;
+                background: none;
+				border-radius: 8px;
+				border: 0;
+				outline: 0;
+                cursor: pointer;
+
+                &:before {
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    font-family: 'FontAwesome';
+                    color: white;
+                    content: "\f026";
+					line-height: 30px;
+					font-size: 28px;
+					margin: 0px;
+                }
+                
+                &.sonando:before {
+                    content: "\f028";
+                }
+
+                &.mute:before {
+                    content: "\f026";
+                }
+            }
+
+            .barra-volumen {
+                width: 50px;
+            }
+        }
+    }
+}
