@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 import Collapsible from 'react-collapsible';
 
-import favicon from "../img/favicon.png";
+import NavLinks from './nav-links';
 
-import '../css/barra-navegacion.scss';
+import favicon from "../../img/favicon.png";
+
+import '../../css/barra-navegacion.scss';
 
 class BarraNavegacion extends Component {
     render() {
@@ -28,12 +30,11 @@ class BarraNavegacion extends Component {
                             </div>
                         }
                     >
-                        <div className="div-navegacion">
-                            <NavLink className="nav-link" exact to="/">
-                                Inicio
-                            </NavLink>
-                        </div>
+                        <NavLinks/>
                     </Collapsible>
+                    <div className="navegacion-escritorio">
+                        <NavLinks/>
+                    </div>
                 </div>
             </div>
         )

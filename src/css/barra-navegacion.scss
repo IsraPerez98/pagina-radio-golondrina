@@ -1,3 +1,13 @@
+@mixin nav-link {
+    margin: auto;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Open Sans";
+    color: white;
+    text-decoration: none;
+    height: 30px;
+}
+
 .barra-navegacion {
     width: 100%;
     height: 60px;
@@ -10,7 +20,6 @@
         height: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         background-color: blue;
 
         .div-logo {
@@ -23,7 +32,6 @@
             }
 
             .logo-link {
-
                 text-decoration: none;
 
                 h1 {
@@ -31,7 +39,7 @@
                     line-height: 60px;
                     font-size: 24px;
                     color: white;
-				    height: 100%;
+                    height: 100%;
                     text-decoration: none;
                     font-family: "Pacifico";
                 }
@@ -39,6 +47,9 @@
         }
 
         .Collapsible {
+            visibility: visible;
+            margin-left: auto;
+
             .boton-navegacion {
                 margin-top: auto;
                 margin-right: 10px;
@@ -62,7 +73,7 @@
                 background-color: blue;
             }
 
-            .div-navegacion {
+            .div-nav-links {
                 width: 100%;
                 margin-top: 20px;
                 margin-bottom: 20px;
@@ -70,13 +81,46 @@
                 flex-direction: column;
 
                 .nav-link {
-                    margin: auto;
-                    text-align: center;
-                    font-size: 28px;
-                    font-family: 'Open Sans';
-                    color: white;
-                    text-decoration: none;
-                    height: 30px;
+                    @include nav-link;
+                }
+            }
+        }
+
+        .navegacion-escritorio {
+            overflow: hidden;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+            margin: 0;
+        }
+
+    }
+}
+
+@media (min-width: 600px) {
+    .barra-navegacion {
+        .contenido-barra-navegacion {
+            .Collapsible {
+                visibility: hidden;
+                width: 0;
+                height: 0;
+            }
+            .navegacion-escritorio {
+                visibility: visible;
+                width: auto;
+                height: 80px;
+                margin-right: 20px;
+
+                
+
+                .div-nav-links {
+
+                    display: flex;
+                flex-direction: row;
+                    .nav-link {
+                        @include nav-link;
+                        line-height: 60px;
+                    }
                 }
             }
         }
