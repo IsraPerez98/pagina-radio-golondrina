@@ -3,11 +3,11 @@ $color-fondo: #191b1c;
 @mixin nav-link {
     margin: auto;
     text-align: center;
-    font-size: 28px;
+    font-size: 36px;
     font-family: "Open Sans";
     color: white;
     text-decoration: none;
-    height: 30px;
+    height: 40px;
 }
 
 .barra-navegacion {
@@ -16,6 +16,7 @@ $color-fondo: #191b1c;
     display: flex;
     flex-direction: row;
     background-color: $color-fondo;
+    margin-bottom: 40px;
 
     .contenido-barra-navegacion {
         width: 100%;
@@ -86,6 +87,8 @@ $color-fondo: #191b1c;
 
                 .nav-link {
                     @include nav-link;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
                 }
             }
         }
@@ -118,12 +121,14 @@ $color-fondo: #191b1c;
                 
 
                 .div-nav-links {
-
                     display: flex;
-                flex-direction: row;
+                    flex-direction: row;
+
                     .nav-link {
                         @include nav-link;
                         line-height: 60px;
+                        margin-left: 10px;
+                        margin-right: 10px;
                     }
                 }
             }
