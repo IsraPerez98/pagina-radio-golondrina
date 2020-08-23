@@ -1,1 +1,6 @@
 @import './fuentes';
+@import './colores';
+
+html {
+    background-color: $color-fondo-pagina;
+}
