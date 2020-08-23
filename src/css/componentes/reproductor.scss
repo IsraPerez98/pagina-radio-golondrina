@@ -118,3 +118,82 @@
         }
     }
 }
+
+@media (min-width: 375px) {
+    .reproductor {
+        .reproductor-interior {
+            width: 90%;
+
+            .reproductor-div-izquierda {
+                width: 160px;
+
+                .suena-ahora {
+                    font-size: 14px;
+                }
+
+                .nombre-programa {
+                    font-size: 16px;
+                }
+            }
+
+            .reproductor-div-derecha {
+                width: 140px;
+                .boton-mute {
+                    width: 40px;
+                    height: 40px;
+
+                    &:before {
+                        line-height: 40px;
+                        font-size: 38px;
+                    }
+                }
+                .barra-volumen {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 425px) {
+    @media (min-width: 375px) {
+        .reproductor {
+            .reproductor-interior {
+                width: 80%;
+    
+                .reproductor-div-izquierda {
+                    width: 45%;
+
+                    .suena-ahora {
+                        width: 130px;
+                    }
+                }
+
+                .reproductor-div-derecha {
+                    width: 170px;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    @media (min-width: 375px) {
+        .reproductor {
+            .reproductor-interior {
+                .reproductor-div-izquierda {
+
+                    .suena-ahora {
+                        width: auto;
+                        font-size: 16px;
+                    }
+
+                    .nombre-programa {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
