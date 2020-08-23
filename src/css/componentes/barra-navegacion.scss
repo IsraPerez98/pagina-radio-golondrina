@@ -1,13 +1,17 @@
+@import '../colores';
+
 $color-fondo: #191b1c;
 
 @mixin nav-link {
     margin: auto;
     text-align: center;
-    font-size: 36px;
     font-family: "Open Sans";
     color: white;
     text-decoration: none;
-    height: 40px;
+
+    &.active {
+        color: $color-verde-radio;
+    }
 }
 
 .barra-navegacion {
@@ -89,6 +93,8 @@ $color-fondo: #191b1c;
                     @include nav-link;
                     margin-top: 10px;
                     margin-bottom: 10px;
+                    font-size: 36px;
+                    height: 40px;
                 }
             }
         }
@@ -129,6 +135,8 @@ $color-fondo: #191b1c;
                         line-height: 60px;
                         margin-left: 10px;
                         margin-right: 10px;
+                        font-size: 24px;
+                        height: 25px;
                     }
                 }
             }
