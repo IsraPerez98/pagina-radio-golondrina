@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './css/fuentes.scss';
+import './css/styles.scss';
 
 import { BrowserRouter, Route } from 'react-router-dom';
 

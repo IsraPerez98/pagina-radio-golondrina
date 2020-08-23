@@ -6,7 +6,7 @@ import NavLinks from './nav-links';
 
 import favicon from "../../img/favicon.png";
 
-import '../../css/barra-navegacion.scss';
+import '../../css/componentes/barra-navegacion.scss';
 
 class BarraNavegacion extends Component {
     render() {

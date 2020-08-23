@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../css/contacto.scss';
+import '../../css/componentes/paginas/contacto.scss';
 
 class Contacto extends Component {
 
