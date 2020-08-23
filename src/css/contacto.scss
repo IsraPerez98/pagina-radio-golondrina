@@ -1,0 +1,113 @@
+@import "./colores";
+
+@mixin icono-zoom {
+	cursor: pointer;
+
+	&:hover,
+	&:active {
+		-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		transform: scale(1.2);
+		color: white;
+	}
+}
+
+.pagina-contacto {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	//background-color: red;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	.cuadro-contacto {
+		background-color: #263238;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 240px;
+		width: 220px;
+		border-radius: 4px;
+		margin: 5px;
+		-webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+		box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+
+		&::first-child {
+			margin-right: 5px;
+		}
+
+		&::last-child {
+			margin-left: 5px;
+		}
+
+		.titulo {
+			color: white;
+			width: 100%;
+			font-size: 22px;
+			text-align: center;
+			font-family: "Montserrat";
+			margin-top: 10px;
+		}
+
+		.fa {
+			text-decoration: none;
+			font-size: 52px;
+			width: 74px;
+			height: 74px;
+			line-height: 74px;
+			border-radius: 8px;
+			text-align: center;
+			color: rgba(255, 255, 255, 0.8);
+
+			margin: 10px;
+
+			&.fa-whatsapp {
+                background-color: $color-whatsapp;
+                
+                @include icono-zoom();
+			}
+
+			&.fa-phone {
+				background-color: $color-telefono;
+			}
+
+			&.fa-envelope {
+                background-color: $color-gmail;
+                @include icono-zoom();
+            }
+            
+            &.fa-facebook {
+                background-color: $color-facebook;
+                @include icono-zoom();
+            }
+		}
+
+		.texto {
+			font-family: "Montserrat";
+			color: white;
+			text-align: center;
+			height: 80px;
+			margin-bottom: 10px;
+			font-size: 14px;
+
+			.texto2 {
+				font-family: "Open Sans";
+				color: inherit;
+                text-decoration: none;
+                color: $color-azul-radio;
+
+                &.numero-tel {
+                    color: white;
+                }
+                
+                &.gmail {
+                    font-size: 12px;
+                }
+			}
+		}
+	}
+}
