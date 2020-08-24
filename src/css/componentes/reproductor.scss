@@ -1,5 +1,11 @@
+.reproductor-espacio {
+    background-color: #202020;
+    height: 80px;
+    width: 100%;
+}
+
 .reproductor{
-    position: sticky;
+    position: fixed;
     display: flex;
     height: 80px;
     bottom: 0;
@@ -8,7 +14,7 @@
     backdrop-filter: blur(5px);
     align-content: center;
     align-items: center;
-    margin-top: 20px;
+
 
     .reproductor-interior {
         width: 95%;
