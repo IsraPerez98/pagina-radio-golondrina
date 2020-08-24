@@ -36,13 +36,15 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		this.actualizarProgramaActual();
+		// como ya recargamos los datos del programa actual al principio, los llamaremos denuevo en 5 minutos
+		setTimeout(this.actualizarProgramaActual, 5 * 60000);
 	}
 
 	render() {
 
 		const programa_actual = this.state.programa_actual;
 		
+		//console.log(programa_actual);
 
 		return (
 			<div className="App">
