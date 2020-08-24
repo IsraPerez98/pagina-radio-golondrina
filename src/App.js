@@ -13,9 +13,35 @@ import Contacto from './componentes/paginas/contacto';
 import Programas from './programas';
 
 class App extends Component {
+
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			programa_actual: Programas.programaActual(),
+		}
+
+		this.actualizarProgramaActual = this.actualizarProgramaActual.bind(this);
+	}
+
+	actualizarProgramaActual() {
+		const programa_actual = Programas.programaActual();
+		this.setState({
+			programa_actual: programa_actual,
+		})
+
+		console.log(`Recargando datos del programa en ${programa_actual.minutos_restantes} minutos`);
+
+		setTimeout(this.actualizarProgramaActual, programa_actual.minutos_restantes * 60000);
+	}
+
+	componentDidMount() {
+		this.actualizarProgramaActual();
+	}
+
 	render() {
 
-		const programa_actual = Programas.programaActual();
+		const programa_actual = this.state.programa_actual;
 		
 
 		return (
