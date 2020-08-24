@@ -1,0 +1,134 @@
+@import "../colores";
+
+$color-fondo-barra: #202020;
+$color-fondo-iconos: #33383b;
+
+.barra-inferior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: $color-fondo-barra;
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .footer {
+        width: 90%;
+        text-align: center;
+        color: white;
+
+        &.primero {
+            font-family: "Righteous";
+            max-width: 280px;
+
+            .radio-golondrina {
+                font-size: 20px;
+                color: $color-azul-radio;
+            }
+
+            .footer-frase {
+                font-size: 16px;
+                color: $color-verde-radio;
+            }
+
+            .img-subtel {
+                width: 90%;
+                height: auto;
+            }
+        }
+
+        &.segundo {
+            max-width: 280px;
+
+            .datos {
+                display: flex;
+                flex-direction: row;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                .fa {
+                    background-color: $color-fondo-iconos;
+                    color: white;
+                    font-size: 25px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 42px;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+
+                p {
+                    font-family: "Open Sans";
+                    font-size: 12px;
+                    line-height: 40px;
+                    margin: 0;
+                }
+
+                a {
+                    color: white;
+                }
+            }
+        }
+
+        &.tercero {
+            max-width: 380px;
+            .footer-marca-registrada {
+                color: white;
+                text-align: center;
+                margin: 40px 0;
+            }
+
+            .footer-iconos {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+
+                a {
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                    background-color: $color-fondo-iconos;
+                    border-radius: 2px;
+
+                    font-size: 24px;
+                    color: white;
+                    text-align: center;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    .barra-inferior {
+        .footer {
+            &.tercero {
+                .footer-iconos {
+                    a {
+                        width: 60px;
+                        height: 60px;
+
+                        font-size: 48px;
+                        line-height: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .barra-inferior {
+        padding: 10px 5%;
+        flex-direction: row;
+        vertical-align: middle;
+        justify-content: space-evenly;
+
+    }
+}
