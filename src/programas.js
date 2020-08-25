@@ -18,8 +18,26 @@ const horario = {
         {
             programa: "El Charro",
             
+            hora_inicio: "7:00",
+            hora_termino: "10:00",
+        },
+        {
+            programa: "El Charro",
+            
             hora_inicio: "12:00",
             hora_termino: "19:00",
+        },
+        {
+            programa: "Marcelita",
+
+            hora_inicio: "20:00",
+            hora_termino: "22:00",
+        }, 
+        {
+            programa: "Marcelita",
+
+            hora_inicio: "22:00",
+            hora_termino: "24:00",
         },
         {
             programa: "Marcelita",
@@ -53,6 +71,7 @@ function horaStringAMinutos(hora) {
 
     return horaAMinutos(horas,minutos);
 }
+
 
 function getProgramaActual() {
     const fecha = new Date();
@@ -107,6 +126,7 @@ const exports = {
     getProgramaActual,
     getHorario,
     getProgramas,
+    horaStringAMinutos,
 }
 
 export default exports;
