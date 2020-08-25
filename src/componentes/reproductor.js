@@ -16,6 +16,7 @@ class Reproductor extends Component {
         this.clickBotonPlay = this.clickBotonPlay.bind(this);
         this.clickBotonMute = this.clickBotonMute.bind(this);
         this.cambioBarraVolumen = this.cambioBarraVolumen.bind(this);
+        this.clickNombrePrograma = this.clickNombrePrograma.bind(this);
     }
 
     clickBotonPlay(evento) {
@@ -54,6 +55,21 @@ class Reproductor extends Component {
         }
     }
 
+    clickNombrePrograma() {
+        const programa_actual = this.props.programa_actual;
+        const nombre = programa_actual.bloque_programa.programa;
+
+        if(nombre === "Programacion Regular"){
+            return;
+        }
+
+        const descripcion = programa_actual.programa.descripcion;
+        const color_principal = programa_actual.programa.colores[0];
+        const color_secundario = programa_actual.programa.colores[1];
+
+        this.props.abrirModalPrograma(nombre, descripcion, color_principal, color_secundario);
+    }
+
     render() {
         const programa_actual = this.props.programa_actual;
         const nombre_programa = programa_actual.bloque_programa.programa;
@@ -67,7 +83,10 @@ class Reproductor extends Component {
                 <div className="reproductor-espacio"></div>
                 <div className="reproductor">
                     <div className="reproductor-interior">
-                        <div className="reproductor-div-izquierda">
+                        <div 
+                            className="reproductor-div-izquierda"
+                            onClick={this.clickNombrePrograma}
+                        >
                             <label className="suena-ahora">
                                 Suena Ahora en Golondrina FM
                             </label>

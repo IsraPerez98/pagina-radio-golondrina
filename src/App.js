@@ -93,7 +93,9 @@ class App extends Component {
 				<Route path="/contacto/" component={Contacto} />
 				<BarraInferior/>
 				<Reproductor
+					Programas={Programas}
 					programa_actual={programa_actual}
+					abrirModalPrograma={this.abrirModalPrograma}
 				/>
 			</BrowserRouter>
 			</div>
