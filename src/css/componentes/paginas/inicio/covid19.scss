@@ -1,0 +1,69 @@
+@import '../../../mixins';
+
+.covid19 {
+
+    background: rgba(0,0,0,0.1);
+    padding: 10px 5px;
+
+    @include sombra-derecha-abajo;
+
+    .bloque-covid19 {
+
+        margin: 40px 0;
+        display: flex;
+        flex-direction: column;
+        background: rgba(0,0,0,0.2);
+        padding: 10px 5px;
+
+        //@include sombra-derecha-abajo;
+
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .img {
+            width: 100%;
+            height: auto;
+            margin: auto;
+
+            cursor: pointer;
+
+            @include sombra-derecha-abajo;
+
+            &.ordenanza-mascarillas {
+                max-width: 750px;
+            }
+
+            &.prevencion {
+                max-width: 500px;
+            }
+        }
+
+        .texto {
+            color: white;
+            font-family: "Open Sans";
+            font-size: smaller;
+            text-align: center;
+
+            cursor: pointer;
+
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .covid19 {
+        .bloque-covid19 {
+            flex-direction: row;
+            .texto {
+                margin: auto;
+            }
+        }
+    }
+}

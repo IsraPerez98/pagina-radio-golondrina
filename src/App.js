@@ -8,6 +8,7 @@ import BarraSuperior from './componentes/barra-navegacion/barra-navegacion';
 import Reproductor from './componentes/reproductor';
 import BarraInferior from './componentes/barra-inferior.js';
 
+import Inicio from './componentes/paginas/inicio/inicio';
 import Programacion from './componentes/paginas/programacion';
 import Contacto from './componentes/paginas/contacto';
 
@@ -77,6 +78,15 @@ class App extends Component {
 					descripcion={programa_modal.descripcion}
 					color_principal={programa_modal.color_principal}
 					color_secundario={programa_modal.color_secundario}
+				/>
+
+				<Route 
+					exact path="/" 
+					render={
+						(props) => 
+                			<Inicio
+						/>
+					}
 				/>
 
 				<Route 
