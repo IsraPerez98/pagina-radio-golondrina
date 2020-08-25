@@ -8,6 +8,7 @@ import BarraSuperior from './componentes/barra-navegacion/barra-navegacion';
 import Reproductor from './componentes/reproductor';
 import BarraInferior from './componentes/barra-inferior.js';
 
+import Programacion from './componentes/paginas/programacion';
 import Contacto from './componentes/paginas/contacto';
 
 import Programas from './programas';
@@ -50,6 +51,7 @@ class App extends Component {
 			<div className="App">
 			<BrowserRouter>
 				<BarraSuperior />
+				<Route path="/programacion/" component={Programacion} />
 				<Route path="/contacto/" component={Contacto} />
 				<BarraInferior/>
 				<Reproductor

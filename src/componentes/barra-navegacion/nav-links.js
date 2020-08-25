@@ -8,6 +8,9 @@ class NavLinks extends Component {
                 <NavLink className="nav-link" exact to="/">
                     Inicio
                 </NavLink>
+                <NavLink className="nav-link" to="/programacion/">
+                    Programacion
+                </NavLink>
                 <NavLink className="nav-link" to="/contacto/">
                     Contacto
                 </NavLink>
