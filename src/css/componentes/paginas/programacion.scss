@@ -114,8 +114,8 @@ $altura-fondo: calc( (17) * 120px );
 
                 .bloque-programa {
                     min-width: auto;
-                    min-height: auto;
-                    max-height: auto;
+                    min-height: none;
+                    max-height: none;
                     width: 100%;
                     margin: 0px 0;
                     position: absolute;
