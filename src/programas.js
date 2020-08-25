@@ -9,7 +9,7 @@ const programas = {
     },
     "Programacion Regular": {
         descripcion : "nada",
-        colores : ["#FFFFFF", "#000000"],
+        colores : ["#43a047", "#00701a"],
     }
 }
 
