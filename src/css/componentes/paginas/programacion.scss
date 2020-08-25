@@ -1,3 +1,5 @@
+$altura-fondo: calc( (17) * 120px );
+
 .pagina-programacion {
     width: 90%;
     display: flex;
@@ -29,14 +31,16 @@
             margin-left: 10px;
             margin-right: 10px;
             overflow: auto;
+            -webkit-overflow-scrolling: touch;
             display: flex;
             flex-direction: row;
-
 
             .bloque-programa {
                 width: 200px;
                 min-width: 200px;
                 height: 120px;
+                min-height: 120px;
+                max-height: 120px;
                 //margin-left: 10px;
                 margin-right: 20px;
                 background-color: #43a047;
@@ -62,6 +66,69 @@
                     font-size: large;
                     font-weight: bolder;
                     margin: 10px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    .pagina-programacion {
+        flex-direction: row;
+        width: 95%;
+
+        .dia {
+            height: 100%;
+            background-size:100% 60px,100% 60px;
+
+            &:nth-child(even) {
+                background-image:linear-gradient(0deg, transparent 50%, #aaa 50%);
+            }
+
+            &:nth-child(odd) {
+                background-image:linear-gradient( 0deg, #aaa 50% , transparent 50%);
+            }
+
+
+            .titulo-dia {
+                height: 30px;
+                margin: 0 auto;
+            }
+
+            .bloques-dia {
+                flex-direction: column;
+                height: $altura-fondo;
+                position: relative;
+                margin: 0;
+                overflow: visible;
+
+        
+                /*
+                &:nth-child(odd) {
+                    background-image:linear-gradient(90deg, #aaa 50%, #ccc 50%);
+                    background-size:100% 60px,100% 60px;
+                    background-position:0 8px, 0 ,0;
+                    
+                }
+                */
+
+                .bloque-programa {
+                    min-width: auto;
+                    min-height: auto;
+                    max-height: auto;
+                    width: 100%;
+                    margin: 0px 0;
+                    position: absolute;
+                    height: 60px;
+
+                    .horas-programa {
+                        margin: 4px;
+                        margin-bottom: 0px;
+                    }
+
+                    .nombre-programa {
+                        margin: 4px;
+                    }
                 }
             }
         }

@@ -19,6 +19,8 @@ class Programacion extends Component {
 
     
     generarBloquesDia(dia) {
+        const Programas = this.props.Programas;
+        
         //const programas = this.state.programas;
         const horario = this.state.horario;
         const horario_dia = horario[dia]; // horario del dia correspondiente
@@ -26,11 +28,20 @@ class Programacion extends Component {
 
         const bloques = []; // aqui se almacenaran los JSX de los bloques del dia
 
+        const hora_base_min = 7 * 60; // 7 am
+
         for(let i in horario_dia) {
             const bloque_programa = horario_dia[i];
 
+            const hora_inicio_min = Programas.horaStringAMinutos(bloque_programa.hora_inicio);
+            const hora_termino_min = Programas.horaStringAMinutos(bloque_programa.hora_termino);
+
+            const top = (hora_inicio_min - hora_base_min) * 2;
+
+            const altura = (hora_termino_min - hora_inicio_min) * 2; // (60 / 30) 60 pixeles por cada 30 minutos
+
             bloques.push(
-                <div className="bloque-programa" key={i}>
+                <div className="bloque-programa" key={i} style={{top: top, height: altura}}>
                     <label className="horas-programa">
                         {bloque_programa.hora_inicio} - {bloque_programa.hora_termino}
                     </label>
