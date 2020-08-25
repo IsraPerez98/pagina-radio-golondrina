@@ -3,17 +3,14 @@ import Modal from "react-modal";
 
 import "../css/componentes/modal-programa.scss";
 
+
 class ModalPrograma extends Component {
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            abierto: false,
-        };
-
-        this.cerrarModal = this.cerrarModal.bind(this);
+    componentDidMount() {
+        Modal.setAppElement(document.getElementById('root'));
     }
 
+    /*
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props !== prevProps) {
             this.setState({
@@ -21,20 +18,23 @@ class ModalPrograma extends Component {
             });
         }
     }
+    */
 
+    /*
     cerrarModal() {
         this.setState({
             abierto: false,
         })
     }
+    */
 
     render() {
         return (
             <Modal 
                 className="modal-programa" 
-                onRequestClose={this.cerrarModal}
+                onRequestClose={this.props.cerrarModalPrograma}
                 shouldCloseOnOverlayClick={true}
-                isOpen={this.state.abierto}
+                isOpen={this.props.abierto}
                 style={{
                     overlay: {
                         backgroundColor: "rgba(0,0,0,0.3)",
@@ -47,7 +47,7 @@ class ModalPrograma extends Component {
                     style={{ backgroundColor: this.props.color_principal }}
                 >
                     <label className="titulo-modal">{this.props.nombre}</label>
-                    <button className="fa fa-window-close" onClick={this.cerrarModal}></button>
+                    <button className="fa fa-window-close" onClick={this.props.cerrarModalPrograma}></button>
                 </div>
                 <div className="espacio-descripcion">
                     <label>{this.props.descripcion}</label>

@@ -24,6 +24,7 @@ class App extends Component {
 			programa_actual: Programas.getProgramaActual(),
 
 			programa_modal: {
+				abierto: false,
 				nombre: "",
 				descripcion: "",
 
@@ -34,6 +35,7 @@ class App extends Component {
 
 		this.actualizarProgramaActual = this.actualizarProgramaActual.bind(this);
 		this.abrirModalPrograma = this.abrirModalPrograma.bind(this);
+		this.cerrarModalPrograma = this.cerrarModalPrograma.bind(this);
 	}
 
 	actualizarProgramaActual() {
@@ -55,10 +57,19 @@ class App extends Component {
 	abrirModalPrograma(nombre, descripcion, color_principal, color_secundario) {
 		this.setState({
 			programa_modal: {
+				abierto: true,
 				nombre: nombre,
 				descripcion: descripcion,
 				color_principal: color_principal,
 				color_secundario: color_secundario,
+			}
+		})
+	}
+
+	cerrarModalPrograma() {
+		this.setState({
+			programa_modal: {
+				abierto: false,
 			}
 		})
 	}
@@ -74,10 +85,13 @@ class App extends Component {
 			<BrowserRouter>
 				<BarraSuperior />
 				<ModalPrograma 
+					abierto={programa_modal.abierto}
 					nombre={programa_modal.nombre}
 					descripcion={programa_modal.descripcion}
 					color_principal={programa_modal.color_principal}
 					color_secundario={programa_modal.color_secundario}
+
+					cerrarModalPrograma={this.cerrarModalPrograma}
 				/>
 
 				<Route 
