@@ -100,7 +100,7 @@ class Programacion extends Component {
 
         for(let i=7; i<25; i++ ){
             jsx_horas.push(
-                <div className="bloque-hora">
+                <div className="bloque-hora" key={i}>
                     <label className="hora">{i}:00</label>
                 </div>
             )
