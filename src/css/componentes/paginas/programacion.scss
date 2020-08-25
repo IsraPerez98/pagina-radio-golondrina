@@ -121,6 +121,16 @@ $altura-fondo: calc( (17) * 120px );
                     position: absolute;
                     height: 60px;
 
+                    -webkit-box-shadow: none;
+                    -moz-box-shadow: none;
+                    box-shadow: none;
+
+                    border-style: groove;
+                    border-width: 1px;
+                    border-color: #333333;
+
+                    margin: -2px;
+
                     .horas-programa {
                         margin: 4px;
                         margin-bottom: 0px;
