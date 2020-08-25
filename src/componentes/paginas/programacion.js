@@ -38,7 +38,7 @@ class Programacion extends Component {
 
             const top = (hora_inicio_min - hora_base_min) * 2;
 
-            const altura = (hora_termino_min - hora_inicio_min) * 2; // (60 / 30) 60 pixeles por cada 30 minutos
+            const altura = (hora_termino_min - hora_inicio_min) * 2; // (60 / 30) 30 pixeles por cada 30 minutos
 
             bloques.push(
                 <div className="bloque-programa" key={i} style={{top: top, height: altura}}>
@@ -82,10 +82,28 @@ class Programacion extends Component {
 
     }
 
+    generarHoras() {
+        const jsx_horas = [];
+
+        for(let i=7; i<25; i++ ){
+            jsx_horas.push(
+                <div className="bloque-hora">
+                    <label className="hora">{i}:00</label>
+                </div>
+            )
+        }
+
+        return jsx_horas;
+    }
+
     render() {
         const jsx_dias = this.generarDias();
+        const jsx_horas = this.generarHoras();
         return(
             <div className="pagina-programacion">
+                <div className="bloques-horas">
+                    {jsx_horas}
+                </div>
                 {jsx_dias}
             </div>
         )

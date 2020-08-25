@@ -5,6 +5,14 @@ $altura-fondo: calc( (17) * 120px );
     display: flex;
     flex-direction: column;
     margin: auto;
+
+    .bloques-horas {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
     .dia {
         margin: 10px 0;
         width: 100% ;
@@ -77,9 +85,28 @@ $altura-fondo: calc( (17) * 120px );
         flex-direction: row;
         width: 95%;
 
+        .bloques-horas {
+            visibility: visible;
+            width: 100px;
+            height: 120px;
+            overflow: initial;
+            padding-top: 60px;
+            margin-right: 15px;
+
+            .bloque-hora {
+                height: 120px;
+
+                .hora {
+                    color: white;
+                    text-align: center;
+                    font-family: 'Open Sans';
+                }
+            }
+        }
+
         .dia {
             height: 100%;
-            background-size:100% 60px,100% 60px;
+            background-size:100% 120px,100% 120px;
 
             &:nth-child(even) {
                 background-image:linear-gradient(0deg, transparent 50%, #aaa 50%);
@@ -91,8 +118,9 @@ $altura-fondo: calc( (17) * 120px );
 
 
             .titulo-dia {
-                height: 30px;
+                height: 60px;
                 margin: 0 auto;
+                line-height: 60px;
             }
 
             .bloques-dia {
@@ -119,7 +147,7 @@ $altura-fondo: calc( (17) * 120px );
                     width: 100%;
                     margin: 0px 0;
                     position: absolute;
-                    height: 60px;
+                    height: 120px;
 
                     -webkit-box-shadow: none;
                     -moz-box-shadow: none;
