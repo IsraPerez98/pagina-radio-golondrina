@@ -19,14 +19,14 @@ class App extends Component {
 		super(props);
 
 		this.state = {
-			programa_actual: Programas.programaActual(),
+			programa_actual: Programas.getProgramaActual(),
 		}
 
 		this.actualizarProgramaActual = this.actualizarProgramaActual.bind(this);
 	}
 
 	actualizarProgramaActual() {
-		const programa_actual = Programas.programaActual();
+		const programa_actual = Programas.getProgramaActual();
 		this.setState({
 			programa_actual: programa_actual,
 		})
@@ -51,7 +51,17 @@ class App extends Component {
 			<div className="App">
 			<BrowserRouter>
 				<BarraSuperior />
-				<Route path="/programacion/" component={Programacion} />
+
+				<Route 
+					path="/programacion/" 
+					render={
+						(props) => 
+                		<Programacion
+                  			Programas={Programas} 
+						/>
+					}
+				/>
+				
 				<Route path="/contacto/" component={Contacto} />
 				<BarraInferior/>
 				<Reproductor
