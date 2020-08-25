@@ -18,20 +18,14 @@ const horario = {
         {
             programa: "El Charro",
             
-            hora_inicio: 12,
-            minuto_inicio: 0,
-
-            hora_termino: 19,
-            minuto_termino: 0,
+            hora_inicio: "12:00",
+            hora_termino: "19:00",
         },
         {
             programa: "Marcelita",
 
-            hora_inicio: 20,
-            minuto_inicio: 0,
-
-            hora_termino: 22,
-            minuto_termino: 0,
+            hora_inicio: "20:00",
+            hora_termino: "22:00",
         }
     ],
 }
@@ -51,9 +45,16 @@ function horaAMinutos(hora,minutos) {
     return hora * 60 + minutos;
 }
 
+function horaStringAMinutos(hora) {
+    const hora_separada = hora.split(":");
+    
+    const horas = parseInt(hora_separada[0]);
+    const minutos = parseInt(hora_separada[1]);
 
+    return horaAMinutos(horas,minutos);
+}
 
-function programaActual() {
+function getProgramaActual() {
     const fecha = new Date();
 
     const dia = dias_semana[fecha.getDay()];
@@ -66,8 +67,8 @@ function programaActual() {
     for(let i in dia_horario) {
         const bloque_programa = dia_horario[i];
 
-        const hora_completa_inicio = horaAMinutos(bloque_programa.hora_inicio, bloque_programa.minuto_inicio);
-        const hora_completa_termino = horaAMinutos(bloque_programa.hora_termino, bloque_programa.minuto_termino);
+        const hora_completa_inicio = horaStringAMinutos(bloque_programa.hora_inicio);
+        const hora_completa_termino = horaStringAMinutos(bloque_programa.hora_termino);
 
         if( hora_completa_inicio < hora_completa_actual && hora_completa_termino > hora_completa_actual ) {
             //console.log(bloque_programa.programa);
@@ -77,26 +78,35 @@ function programaActual() {
                 minutos_restantes: hora_completa_termino - hora_completa_actual,
             }
         }
+    }
 
-        return {
-            bloque_programa: {
-                programa: "Programacion Regular",
-            
-                hora_inicio: 0,
-                minuto_inicio: 0,
+    return {
+        bloque_programa: {
+            programa: "Programacion Regular",
+        
+            hora_inicio: 0,
+            minuto_inicio: 0,
 
-                hora_termino: 0,
-                minuto_termino: 0,
-            },
-            programa: programas["Programacion Regular"],
-            minutos_restantes: 5,
-        }
+            hora_termino: 0,
+            minuto_termino: 0,
+        },
+        programa: programas["Programacion Regular"],
+        minutos_restantes: 5,
     }
 }
 
+function getHorario() {
+    return horario;
+}
+
+function getProgramas() {
+    return programas;
+}
 
 const exports = {
-    programaActual,
+    getProgramaActual,
+    getHorario,
+    getProgramas,
 }
 
 export default exports;
