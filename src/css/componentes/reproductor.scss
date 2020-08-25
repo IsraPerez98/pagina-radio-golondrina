@@ -1,3 +1,8 @@
+:root { // para cambiar los colores con js
+	--barra-volumen-color-fondo: white;
+	--barra-volumen-color-boton: black;
+}
+
 .reproductor-espacio {
     background-color: #202020;
     height: 80px;
@@ -91,14 +96,14 @@
             .boton-mute {
                 height: 30px;
                 width: 30px;
-                margin-top: auto;
-                margin-bottom: auto;
-                background: none;
+                min-width: 30px;
+                margin: auto;
 				border-radius: 8px;
 				border: 0;
 				outline: 0;
                 cursor: pointer;
-                margin-right: 10px;
+                margin-right: 5px;
+                margin-left: 10px;
 
                 &:before {
                     width: 100%;
@@ -106,10 +111,8 @@
                     text-align: center;
                     font-family: 'FontAwesome';
                     color: white;
-                    content: "\f026";
 					line-height: 30px;
-					font-size: 28px;
-					margin: 0px;
+					font-size: 24px;
                 }
                 
                 &.sonando:before {
@@ -122,7 +125,58 @@
             }
 
             .barra-volumen {
+                -webkit-appearance: none;
+
                 width: 50px;
+                height: 10px;
+                
+                margin-top: auto;
+                margin-bottom: auto;
+
+                background-color: transparent;
+
+                cursor: ew-resize;
+
+                overflow: hidden;
+
+                //chrome
+                &::-webkit-slider-runnable-track {
+                    -webkit-appearance: none;
+                    height: 10px;
+                    background-color: white;
+                }
+
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    width: 10px;
+                    height: 10px;
+                    background: var(--barra-volumen-color-boton);
+                    box-shadow: -80px 0 0 80px var(--barra-volumen-color-fondo);
+                }
+
+                //firefox
+                &::-moz-range-progress {
+                    background-color: var(--barra-volumen-color-fondo); 
+                    height: 10px;
+                }
+
+                &::-moz-range-track {
+                    height: 10px;
+                    background-color: white;
+                }
+
+                &::-moz-range-thumb {
+                    background-color: var(--barra-volumen-color-boton);
+                    border-radius: 0;
+                    border: 0;
+                    height: 10px;
+                    width: 10px;
+                }
+
+                //ie
+                &::-ms-fill-lower {
+                    background-color: var(--barra-volumen-color-fondo); 
+                }
             }
         }
     }
@@ -147,6 +201,10 @@
 
             .reproductor-div-derecha {
                 width: 160px;
+
+                .barra-volumen {
+                    width: 100px
+                }
             }
         }
     }
@@ -168,9 +226,7 @@
 
                 .reproductor-div-derecha {
                     width: 45%;
-                    .barra-volumen {
-                        width: 100px;
-                    }
+                    
                 }
             }
         }
@@ -181,9 +237,8 @@
     @media (min-width: 375px) {
         .reproductor {
             .reproductor-interior {
-                width: 750px;
+                width: 700px;
                 .reproductor-div-izquierda {
-
                     .suena-ahora {
                         width: auto;
                         font-size: 16px;

@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import "../css/componentes/reproductor.scss";
 
 class Reproductor extends Component {
+    // se le pasa this.props.programa_actual
+
     constructor(props) {
         super(props);
 
@@ -53,6 +55,13 @@ class Reproductor extends Component {
     }
 
     render() {
+        const programa_actual = this.props.programa_actual;
+        const nombre_programa = programa_actual.bloque_programa.programa;
+        const colores_programa = programa_actual.programa.colores;
+
+        document.documentElement.style.setProperty("--barra-volumen-color-fondo", colores_programa[0]);
+        document.documentElement.style.setProperty("--barra-volumen-color-boton", colores_programa[1]);
+        
         return (
             <div>
                 <div className="reproductor-espacio"></div>
@@ -62,8 +71,8 @@ class Reproductor extends Component {
                             <label className="suena-ahora">
                                 Suena Ahora en Golondrina FM
                             </label>
-                            <label className="nombre-programa">
-                                SAMPLE TEXT
+                            <label className="nombre-programa" style={{color: colores_programa[0]}}>
+                                {nombre_programa}
                             </label>
                         </div>
                         <div className="reproductor-div-centro">
@@ -71,6 +80,7 @@ class Reproductor extends Component {
                                 className="boton-play play"
                                 ref={this.botonPlay}
                                 onClick={this.clickBotonPlay}
+                                style={{backgroundColor: colores_programa[0]}}
                             ></button>
                         </div>
                         <div className="reproductor-div-derecha">
@@ -78,6 +88,7 @@ class Reproductor extends Component {
                                 className="boton-mute sonando"
                                 ref={this.botonMute}
                                 onClick={this.clickBotonMute}
+                                style={{backgroundColor: colores_programa[0]}}
                             ></button>
                             <input
                                 className="barra-volumen"
