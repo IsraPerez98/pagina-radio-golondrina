@@ -32,6 +32,8 @@ class ModalPrograma extends Component {
         return (
             <Modal 
                 className="modal-programa" 
+                onRequestClose={this.cerrarModal}
+                shouldCloseOnOverlayClick={true}
                 isOpen={this.state.abierto}
                 style={{
                     overlay: {
