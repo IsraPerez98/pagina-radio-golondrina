@@ -65,15 +65,15 @@
 				border: 0;
 				outline: 0;
                 cursor: pointer;
+                text-align: center;
                 
                 &:before {
                     width: 100%;
                     height: 100%;
-                    text-align: center;
                     font-family: 'FontAwesome';
                     color: white;
 					line-height: 60px;
-					font-size: 58px;
+					font-size: 54px;
 					margin: 0px;
                 }
 
@@ -112,7 +112,7 @@
                     font-family: 'FontAwesome';
                     color: white;
 					line-height: 30px;
-					font-size: 24px;
+					font-size: 20px;
                 }
                 
                 &.sonando:before {
@@ -237,7 +237,7 @@
     @media (min-width: 375px) {
         .reproductor {
             .reproductor-interior {
-                width: 700px;
+                width: 600px;
                 .reproductor-div-izquierda {
                     .suena-ahora {
                         width: auto;
