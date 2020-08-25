@@ -12,6 +12,7 @@ import Programacion from './componentes/paginas/programacion';
 import Contacto from './componentes/paginas/contacto';
 
 import Programas from './programas';
+import ModalPrograma from './componentes/modal-programa';
 
 class App extends Component {
 
@@ -20,9 +21,18 @@ class App extends Component {
 
 		this.state = {
 			programa_actual: Programas.getProgramaActual(),
+
+			programa_modal: {
+				nombre: "",
+				descripcion: "",
+
+				color_principal: "",
+				color_secundario: "",
+			}
 		}
 
 		this.actualizarProgramaActual = this.actualizarProgramaActual.bind(this);
+		this.abrirModalPrograma = this.abrirModalPrograma.bind(this);
 	}
 
 	actualizarProgramaActual() {
@@ -41,23 +51,41 @@ class App extends Component {
 		setTimeout(this.actualizarProgramaActual, 5 * 60000);
 	}
 
+	abrirModalPrograma(nombre, descripcion, color_principal, color_secundario) {
+		this.setState({
+			programa_modal: {
+				nombre: nombre,
+				descripcion: descripcion,
+				color_principal: color_principal,
+				color_secundario: color_secundario,
+			}
+		})
+	}
+
 	render() {
 
 		const programa_actual = this.state.programa_actual;
 		
-		//console.log(programa_actual);
+		const programa_modal = this.state.programa_modal;
 
 		return (
 			<div className="App">
 			<BrowserRouter>
 				<BarraSuperior />
+				<ModalPrograma 
+					nombre={programa_modal.nombre}
+					descripcion={programa_modal.descripcion}
+					color_principal={programa_modal.color_principal}
+					color_secundario={programa_modal.color_secundario}
+				/>
 
 				<Route 
 					path="/programacion/" 
 					render={
 						(props) => 
                 		<Programacion
-                  			Programas={Programas} 
+                  			Programas={Programas}
+							abrirModalPrograma={this.abrirModalPrograma}
 						/>
 					}
 				/>
