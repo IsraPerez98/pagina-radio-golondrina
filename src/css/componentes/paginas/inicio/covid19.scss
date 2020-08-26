@@ -64,11 +64,15 @@
     .covid19 {
         .bloque-covid19 {
             flex-direction: row;
-            .img {
-                margin-right: 10px;
+
+            justify-content: space-evenly;
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
             }
             .texto {
                 margin: auto;
+                width: 20%;
             }
         }
     }
