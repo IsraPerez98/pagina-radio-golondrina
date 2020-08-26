@@ -2,17 +2,19 @@
 
 .covid19 {
 
-    background: #455a64;
+    //background: #455a64;
+    background-color: rgba(0,0,0,0.2);
     padding: 10px 10px;
 
     @include sombra-derecha-abajo;
 
     .bloque-covid19 {
 
-        margin: 20px 0;
+        margin: 15px 0;
         display: flex;
         flex-direction: column;
-        background: rgba(0,0,0,0.2);
+        //background: rgba(0,0,0,0.2);
+        background-color: #455a64;
         padding: 10px 5px;
 
         //@include sombra-derecha-abajo;
