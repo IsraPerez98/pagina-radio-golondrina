@@ -113,7 +113,7 @@
     .programa-actual {
         .bloque-programa {
             width: 80%;
-            max-width: none;
+            max-width: 800px;
 
             .barra-titulo {
                 width: 100%;
@@ -121,7 +121,7 @@
             }
 
             .contenido-programa {
-                min-height: 130px;
+                min-height: 200px;
                 display: flex;
                 flex-direction: row;
                 
