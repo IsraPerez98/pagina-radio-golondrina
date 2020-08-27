@@ -1,7 +1,7 @@
 const programas = {
     "El Charro": {
         descripcion : "programa fome xd",
-        colores : ["#FFFFFF", "#000000"],
+        colores : ["#1b5e20", "#003300"],
     },
     "Marcelita": {
         descripcion : "programa fome xd",

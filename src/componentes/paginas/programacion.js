@@ -51,7 +51,7 @@ class Programacion extends Component {
             bloques.push(
                 <div className="bloque-programa" 
                     key={i} 
-                    style={{top: top, height: altura}}
+                    style={{top: top, height: altura, backgroundColor: color_principal}}
                     //onClick={this.props.abrirModalPrograma(bloque_programa.programa, descripcion, color_principal, color_secundario )}
                     onClick={() => this.props.abrirModalPrograma(bloque_programa.programa, descripcion, color_principal, color_secundario )}
                 >
