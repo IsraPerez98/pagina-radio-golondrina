@@ -5,7 +5,7 @@ const programas = {
     },
     "Marcelita": {
         descripcion : "programa fome xd",
-        colores : ["#FFFFFF", "#000000"],
+        colores : ["#ad1457", "#78002e"],
     },
     "Programacion Regular": {
         descripcion : "nada",
@@ -46,6 +46,14 @@ const horario = {
             hora_termino: "22:00",
         }
     ],
+    "Jueves": [
+        {
+            programa: "Marcelita",
+
+            hora_inicio: "00:00",
+            hora_termino: "12:00",
+        }
+    ]
 }
 
 

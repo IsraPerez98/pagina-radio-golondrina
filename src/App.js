@@ -99,6 +99,7 @@ class App extends Component {
 					render={
 						(props) => 
                 			<Inicio
+							programa_actual={programa_actual}
 						/>
 					}
 				/>

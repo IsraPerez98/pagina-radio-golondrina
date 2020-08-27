@@ -1,0 +1,159 @@
+@import "../../../mixins";
+
+.programa-actual {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    //height: 260px;
+
+    margin-top: 25px;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    @include sombra-derecha-abajo;
+
+    .bloque-suena-ahora {
+        margin-top: 10px;
+        text-align: center;
+        .suena-ahora {
+            font-size: 24px;
+            color: white;
+
+            font-family: "Open Sans";
+        }
+    }
+
+    .bloque-programa {
+        margin: auto;
+        width: 95%;
+        //height: 200px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+
+        @include sombra-derecha-abajo;
+
+        max-width: 320px;
+
+        .barra-titulo {
+            height: 42px;
+            text-align: center;
+            overflow: hidden;
+
+            -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
+
+            margin-bottom: 10px;
+
+            .titulo {
+                line-height: 42px;
+                color: white;
+
+                font-family: "Montserrat";
+                font-size: 16px;
+            }
+        }
+
+        .contenido-programa {
+            .bloque-horario {
+                border-bottom-style: solid;
+                border-bottom-color: rgba(0, 0, 0, 0.2);
+                border-bottom-width: 1px;
+
+                margin-bottom: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                text-align: center;
+
+                font-family: "Roboto";
+                color: white;
+                font-size: 12px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+            .bloque-descripcion-programa {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                margin-bottom: 5px;
+                min-height: 100px;
+            }
+        }
+    }
+
+    .bloque-revisa-programacion {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        text-align: center;
+
+        .revisa-programacion {
+            color: white;
+
+            font-family: "Open Sans";
+
+            .nav-link {
+                text-decoration: underline;
+                color: white;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .programa-actual {
+        .bloque-programa {
+            width: 80%;
+            max-width: none;
+
+            .barra-titulo {
+                width: 100%;
+                margin-bottom: 0px;
+            }
+
+            .contenido-programa {
+                min-height: 130px;
+                display: flex;
+                flex-direction: row;
+                
+                .bloque-horario {
+                    width: 280px;
+                    height: 100%;
+                    min-height: inherit;
+                    margin: 0px;
+    
+                    border-bottom-width: 0px;
+                    border-right-width: 2px;
+                    border-right-style: solid;
+                    border-right-color: rgba(0, 0, 0, 0.2);
+
+                    padding-left: 5px;
+                    padding-right: 5px;
+
+                    margin: auto;
+
+                    label {
+                        margin: 5px 0;
+                    }
+                }
+    
+                .bloque-descripcion-programa {
+                    width: 100%;
+
+                    
+                }
+            }
+
+            
+        }
+    }
+}
