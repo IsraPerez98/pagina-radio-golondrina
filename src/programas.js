@@ -103,11 +103,9 @@ function getProgramaActual() {
         bloque_programa: {
             programa: "Programacion Regular",
         
-            hora_inicio: 0,
-            minuto_inicio: 0,
+            hora_inicio: "0:00",
 
-            hora_termino: 0,
-            minuto_termino: 0,
+            hora_termino: "0:00",
         },
         programa: programas["Programacion Regular"],
         minutos_restantes: 5,
