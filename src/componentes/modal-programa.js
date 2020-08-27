@@ -5,30 +5,39 @@ import "../css/componentes/modal-programa.scss";
 
 
 class ModalPrograma extends Component {
+    /* se le pasa this.props.abierto (true,false)
+        this.props.bloque_programa
+        this.props.info_programa
+        this.props.cerrarModalPrograma()
+    */
 
     componentDidMount() {
         Modal.setAppElement(document.getElementById('root'));
     }
 
-    /*
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props !== prevProps) {
-            this.setState({
-                abierto: true,
-            });
-        }
-    }
-    */
+    diasSemana() {
+        const fecha = new Date();
 
-    /*
-    cerrarModal() {
-        this.setState({
-            abierto: false,
-        })
+        const dias_semana = [
+            "Domingos",
+            "Lunes",
+            "Martes",
+            "Miercoles",
+            "Jueves",
+            "Viernes",
+            "Sabados",
+        ];
+
+        return dias_semana[fecha.getDay()];
     }
-    */
 
     render() {
+        const info_programa = this.props.info_programa;
+        const bloque_programa = this.props.bloque_programa;
+
+        if(!(info_programa)) return (<div></div>);
+        if(!(bloque_programa)) return (<div></div>);
+
         return (
             <Modal 
                 className="modal-programa" 
@@ -42,15 +51,21 @@ class ModalPrograma extends Component {
                     },
                 }}
             >
-                <div
-                    className="barra-superior"
-                    style={{ backgroundColor: this.props.color_principal }}
-                >
-                    <label className="titulo-modal">{this.props.nombre}</label>
-                    <button className="fa fa-window-close" onClick={this.props.cerrarModalPrograma}></button>
-                </div>
-                <div className="espacio-descripcion">
-                    <label>{this.props.descripcion}</label>
+                <div className="bloque-programa">
+                    <div className="barra-titulo" style={{backgroundColor: info_programa.colores[1]}}>
+                        <label className="titulo">{bloque_programa.programa}</label>
+                        <button className="boton-cerrar" onClick={this.props.cerrarModalPrograma}>X</button>
+                    </div>
+                    <div className="contenido-programa" style={{backgroundColor: info_programa.colores[0]}}>
+                        <div className="bloque-horario">
+                            <label className="encuentranos">Encuentranos todos los {this.diasSemana()}</label>
+                            <label className="de">Desde las {bloque_programa.hora_inicio} horas</label>
+                            <label className="hasta">Hasta las {bloque_programa.hora_termino} horas</label>
+                        </div>
+                        <div className="bloque-descripcion-programa">
+                            <label className="descripcion-programa">{info_programa.descripcion_programa}</label>
+                        </div>
+                    </div>
                 </div>
             </Modal>
         );

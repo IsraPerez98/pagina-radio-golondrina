@@ -44,16 +44,16 @@ class Programacion extends Component {
             const altura = (hora_termino_min - hora_inicio_min) * 2; // (60 / 30) 30 pixeles por cada 30 minutos
 
             const info_programa = programas[bloque_programa.programa];
-            const descripcion = info_programa.descripcion;
+            //const descripcion = info_programa.descripcion;
             const color_principal = info_programa.colores[0];
-            const color_secundario = info_programa.colores[1];
+            //const color_secundario = info_programa.colores[1];
 
             bloques.push(
                 <div className="bloque-programa" 
                     key={i} 
                     style={{top: top, height: altura, backgroundColor: color_principal}}
                     //onClick={this.props.abrirModalPrograma(bloque_programa.programa, descripcion, color_principal, color_secundario )}
-                    onClick={() => this.props.abrirModalPrograma(bloque_programa.programa, descripcion, color_principal, color_secundario )}
+                    onClick={() => this.props.abrirModalPrograma(info_programa, bloque_programa)}
                 >
                     <label className="horas-programa">
                         {bloque_programa.hora_inicio} - {bloque_programa.hora_termino}

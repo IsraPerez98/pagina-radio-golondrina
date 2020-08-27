@@ -1,11 +1,125 @@
 @mixin sombra-derecha-abajo {
-    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 @mixin sombra-abajo {
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+@mixin dialogo-programa {
+    .barra-titulo {
+        height: 42px;
+        text-align: center;
+        overflow: hidden;
+
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
+
+        //margin-bottom: 10px;
+
+        .titulo {
+            line-height: 42px;
+            color: white;
+
+            font-family: "Montserrat";
+            font-size: 16px;
+        }
+
+        .boton-cerrar {
+            height: 100%;
+            width: 42px;
+            float: right;
+            background-color: #d50000;
+            border: none;
+
+            cursor: pointer;
+
+            color: white;
+            font-size: 38px;
+            line-height: 42px;
+            text-align: center;
+
+            font-family: "Montserrat";
+
+        }
+    }
+
+    .contenido-programa {
+        height: 100%;
+        .bloque-horario {
+            min-height: 70px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-bottom-style: solid;
+            border-bottom-color: rgba(0, 0, 0, 0.2);
+            border-bottom-width: 1px;
+
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            text-align: center;
+
+            font-family: "Roboto";
+            color: white;
+            font-size: 12px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .bloque-descripcion-programa {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 5px;
+            min-height: 150px;
+            height: 100%;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .barra-titulo {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .contenido-programa {
+            min-height: 320px;
+            display: flex;
+            flex-direction: row;
+
+            .bloque-horario {
+                width: 280px;
+                height: 100%;
+                min-height: inherit;
+                margin: 0px;
+
+                border-bottom-width: 0px;
+                border-right-width: 2px;
+                border-right-style: solid;
+                border-right-color: rgba(0, 0, 0, 0.2);
+
+                padding-left: 5px;
+                padding-right: 5px;
+
+                margin: auto;
+
+                label {
+                    margin: 5px 0;
+                }
+            }
+
+            .bloque-descripcion-programa {
+                width: 100%;
+            }
+        }
+    }
 }

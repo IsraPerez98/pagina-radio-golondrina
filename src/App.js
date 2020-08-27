@@ -25,11 +25,8 @@ class App extends Component {
 
 			programa_modal: {
 				abierto: false,
-				nombre: "",
-				descripcion: "",
-
-				color_principal: "",
-				color_secundario: "",
+				info_programa: null,
+				bloque_programa: null,
 			}
 		}
 
@@ -54,14 +51,12 @@ class App extends Component {
 		setTimeout(this.actualizarProgramaActual, 5 * 60000);
 	}
 
-	abrirModalPrograma(nombre, descripcion, color_principal, color_secundario) {
+	abrirModalPrograma(info_programa, bloque_programa) {
 		this.setState({
 			programa_modal: {
 				abierto: true,
-				nombre: nombre,
-				descripcion: descripcion,
-				color_principal: color_principal,
-				color_secundario: color_secundario,
+				info_programa: info_programa,
+				bloque_programa: bloque_programa,
 			}
 		})
 	}
@@ -86,10 +81,9 @@ class App extends Component {
 				<BarraSuperior />
 				<ModalPrograma 
 					abierto={programa_modal.abierto}
-					nombre={programa_modal.nombre}
-					descripcion={programa_modal.descripcion}
-					color_principal={programa_modal.color_principal}
-					color_secundario={programa_modal.color_secundario}
+					
+					info_programa={programa_modal.info_programa}
+					bloque_programa={programa_modal.bloque_programa}
 
 					cerrarModalPrograma={this.cerrarModalPrograma}
 				/>
