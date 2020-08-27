@@ -57,17 +57,15 @@ class Reproductor extends Component {
 
     clickNombrePrograma() {
         const programa_actual = this.props.programa_actual;
-        const nombre = programa_actual.bloque_programa.programa;
 
-        if(nombre === "Programacion Regular"){
+        const info_programa = programa_actual.programa;
+        const bloque_programa = programa_actual.bloque_programa;
+
+        if(bloque_programa.programa === "Programacion Regular"){
             return;
         }
-
-        const descripcion = programa_actual.programa.descripcion;
-        const color_principal = programa_actual.programa.colores[0];
-        const color_secundario = programa_actual.programa.colores[1];
-
-        this.props.abrirModalPrograma(nombre, descripcion, color_principal, color_secundario);
+        
+        this.props.abrirModalPrograma(info_programa, bloque_programa);
     }
 
     render() {
