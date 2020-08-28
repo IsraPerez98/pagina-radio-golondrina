@@ -63,7 +63,7 @@ class ModalPrograma extends Component {
                             <label className="hasta">Hasta las {bloque_programa.hora_termino} horas</label>
                         </div>
                         <div className="bloque-descripcion-programa">
-                            <label className="descripcion-programa" style={{color: info_programa.color_texto}}>{info_programa.descripcion_programa}</label>
+                            <label className="descripcion-programa" style={{color: info_programa.color_texto}}>{info_programa.descripcion}</label>
                         </div>
                     </div>
                 </div>
