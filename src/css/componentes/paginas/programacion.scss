@@ -64,6 +64,7 @@ $altura-fondo: calc( (17) * 120px );
                 cursor: pointer;
 
                 .horas-programa {
+                    cursor: pointer;
                     color: #DDDDDD;
                     font-size: medium;
                     font-weight: bold;
@@ -72,6 +73,7 @@ $altura-fondo: calc( (17) * 120px );
                 }
 
                 .nombre-programa {
+                    cursor: pointer;
                     color: white;
                     font-size: large;
                     font-weight: bolder;
