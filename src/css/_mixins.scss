@@ -84,6 +84,7 @@
             margin-bottom: 5px;
             min-height: 150px;
             height: 100%;
+            //vertical-align: middle;
         }
     }
 
@@ -121,6 +122,9 @@
 
             .bloque-descripcion-programa {
                 width: 100%;
+                vertical-align: middle;
+                margin-top: auto;
+                margin-bottom: auto;
             }
         }
     }
