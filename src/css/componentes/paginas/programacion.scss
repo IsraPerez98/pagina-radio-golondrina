@@ -164,10 +164,31 @@ $altura-fondo: calc( (17) * 120px );
                     .horas-programa {
                         margin: 4px;
                         margin-bottom: 0px;
+
+                        font-size: 16px;
                     }
 
                     .nombre-programa {
                         margin: 4px;
+
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1920px) {
+    .pagina-programacion {
+        .dia {
+            .bloques-dia {
+                .bloque-programa {
+                    .horas-programa {
+                        font-size: medium;
+                    }
+                    .nombre-programa {
+                        font-size: large;
                     }
                 }
             }

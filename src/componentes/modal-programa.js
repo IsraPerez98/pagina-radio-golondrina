@@ -53,17 +53,17 @@ class ModalPrograma extends Component {
             >
                 <div className="bloque-programa">
                     <div className="barra-titulo" style={{backgroundColor: info_programa.colores[1]}}>
-                        <label className="titulo">{bloque_programa.programa}</label>
+                        <label className="titulo" style={{color: info_programa.color_texto}} >{bloque_programa.programa}</label>
                         <button className="boton-cerrar" onClick={this.props.cerrarModalPrograma}>X</button>
                     </div>
                     <div className="contenido-programa" style={{backgroundColor: info_programa.colores[0]}}>
-                        <div className="bloque-horario">
+                        <div className="bloque-horario" style={{color: info_programa.color_texto}}>
                             <label className="encuentranos">Encuentranos todos los {this.diasSemana()}</label>
                             <label className="de">Desde las {bloque_programa.hora_inicio} horas</label>
                             <label className="hasta">Hasta las {bloque_programa.hora_termino} horas</label>
                         </div>
                         <div className="bloque-descripcion-programa">
-                            <label className="descripcion-programa">{info_programa.descripcion_programa}</label>
+                            <label className="descripcion-programa" style={{color: info_programa.color_texto}}>{info_programa.descripcion_programa}</label>
                         </div>
                     </div>
                 </div>

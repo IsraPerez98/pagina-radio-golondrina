@@ -1,58 +1,382 @@
 const programas = {
-    "El Charro": {
-        descripcion : "programa fome xd",
-        colores : ["#1b5e20", "#003300"],
+    "Matinal Paine Se Renueva": {
+        descripcion : "Programa orientado a informar a la comunidad Painina de las últimas noticias locales, nacionales e internacionales, ademas de entretener y motivar las mañanas de los auditores, conducido por Rodrigo Contreras, Concejal",
+        colores : ["#880e4f", "#560027"],
+        color_texto: ["#ffffff"],
     },
-    "Marcelita": {
-        descripcion : "programa fome xd",
-        colores : ["#ad1457", "#78002e"],
+    "La Radio Enseña" : {
+        descripcion: "",
+        colores: ["#c51162","#8e0038"],
+        color_texto: ["#ffffff"],
     },
-    "Programacion Regular": {
-        descripcion : "nada",
-        colores : ["#43a047", "#00701a"],
+    "La Mañana Cristalina" : {
+        descripcion: "",
+        colores: ["#ff8f00", "#c56000"],
+        color_texto: ["#000000"],
+    },
+    "Musica de los 80's" : {
+        descripcion: "",
+        colores: ["#1a237e","#000051"],
+        color_texto: ["#ffffff"],
+    },
+    "El Cantar de Nuestra Tierra" : {
+        descripcion: "",
+        colores: ["#6d4c41", "#40241a"],
+        color_texto: ["#ffffff"],
+    },
+    "La Fiesta del Charro" : {
+        descripcion: "",
+        colores: ["#64dd17", "#1faa00"],
+        color_texto: ["#000000"],
+    },
+    "Long Play de los Recuerdos" : {
+        descripcion: "",
+        colores: ["#00796b", "#004c40"],
+        color_texto: ["#ffffff"],
+    },
+    "A 120 Por Hora" : {
+        descripcion: "",
+        colores: ["#2e7d32","#005005"],
+        color_texto: ["#ffffff"],
+    },
+    "Salud Paine" : {
+        descripcion: "",
+        colores: ["#29b6f6","#0086c3"],
+        color_texto: ["#000000"],
+    },
+    "Con Peras y Manzanas" : {
+        descripcion: "",
+        colores: ["#c62828","#8e0000"],
+        color_texto: ["#ffffff"],
+    },
+    "Juntos Cuidemos Paine" : {
+        descripcion: "",
+        colores: ["#00838f","#005662"],
+        color_texto: ["#ffffff"],
+    },
+    "Pasadito las 12" : {
+        descripcion: "",
+        colores: ["#00796b","#004c40"],
+        color_texto: ["#ffffff"],
+    },
+    "El Bailable de la 106.1" : {
+        descripcion: "",
+        colores: ["#00796b","#004c40"],
+        color_texto: ["#ffffff"],
+    },
+    "Golondrina en Domingo" : {
+        descripcion: "",
+        colores: ["#b71c1c","#7f0000"],
+        color_texto: ["#ffffff"],
+    },
+    "Psicologia" : {
+        descripcion: "",
+        colores: ["#00796b","#004c40"],
+    },
+    "Programacion Regular" : {
+        descripcion: "",
+        colores: ["#01579b","#002f6c"],
+        color_texto: ["#ffffff"],
     }
 }
 
 const horario = {
     "Lunes": [
         {
-            programa: "El Charro",
-            
-            hora_inicio: "7:00",
+            programa: "Matinal Paine Se Renueva",
+
+            hora_inicio: "7:30",
+            hora_termino: "9:30",
+        },
+        {
+            programa: "La Radio Enseña",
+
+            hora_inicio: "10:00",
+            hora_termino: "10:30",
+        },
+        {
+            programa: "La Mañana Cristalina",
+
+            hora_inicio: "10:40",
+            hora_termino: "13:00",
+        },
+        {
+            programa: "Musica de los 80's",
+
+            hora_inicio: "13:00",
+            hora_termino: "13:30",
+        },
+        {
+            programa: "El Cantar de Nuestra Tierra",
+
+            hora_inicio: "13:30",
+            hora_termino: "14:00",
+        },
+        {
+            programa: "La Fiesta del Charro",
+
+            hora_inicio: "14:00",
+            hora_termino: "17:00",
+        },
+        {
+            programa: "Long Play de los Recuerdos",
+
+            hora_inicio: "18:00",
+            hora_termino: "20:00",
+        },
+        {
+            programa: "A 120 Por Hora",
+
+            hora_inicio: "21:00",
+            hora_termino: "23:30",
+        }
+
+    ],
+    "Martes": [
+        {
+            programa: "Matinal Paine Se Renueva",
+
+            hora_inicio: "8:30",
             hora_termino: "10:00",
         },
         {
-            programa: "El Charro",
-            
+            programa: "La Radio Enseña",
+
+            hora_inicio: "10:00",
+            hora_termino: "10:30",
+        },
+        {
+            programa: "La Mañana Cristalina",
+
+            hora_inicio: "10:40",
+            hora_termino: "12:00",
+        },
+        {
+            programa: "Con Peras y Manzanas",
+
             hora_inicio: "12:00",
+            hora_termino: "13:00",
+        },
+        {
+            programa: "Musica de los 80's",
+
+            hora_inicio: "13:00",
+            hora_termino: "13:30",
+        },
+        {
+            programa: "El Cantar de Nuestra Tierra",
+
+            hora_inicio: "13:30",
+            hora_termino: "14:00",
+        },
+        {
+            programa: "La Fiesta del Charro",
+
+            hora_inicio: "14:00",
+            hora_termino: "17:00",
+        },
+        {
+            programa: "Long Play de los Recuerdos",
+
+            hora_inicio: "18:00",
             hora_termino: "19:00",
         },
         {
-            programa: "Marcelita",
+            programa: "Juntos Cuidemos Paine",
 
-            hora_inicio: "20:00",
-            hora_termino: "22:00",
-        }, 
-        {
-            programa: "Marcelita",
-
-            hora_inicio: "22:00",
-            hora_termino: "24:00",
+            hora_inicio: "19:00",
+            hora_termino: "20:00",
         },
         {
-            programa: "Marcelita",
+            programa: "A 120 Por Hora",
 
-            hora_inicio: "20:00",
-            hora_termino: "22:00",
+            hora_inicio: "21:00",
+            hora_termino: "23:30",
+        }
+    ],
+    "Miercoles": [
+        {
+            programa: "Matinal Paine Se Renueva",
+
+            hora_inicio: "8:30",
+            hora_termino: "10:00",
+        },
+        {
+            programa: "La Radio Enseña",
+
+            hora_inicio: "10:00",
+            hora_termino: "10:30",
+        },
+        {
+            programa: "La Mañana Cristalina",
+
+            hora_inicio: "10:40",
+            hora_termino: "12:30",
+        },
+        {
+            programa: "Pasadito las 12",
+
+            hora_inicio: "12:30",
+            hora_termino: "13:30",
+        },
+        {
+            programa: "El Cantar de Nuestra Tierra",
+
+            hora_inicio: "13:30",
+            hora_termino: "14:00",
+        },
+        {
+            programa: "La Fiesta del Charro",
+
+            hora_inicio: "14:00",
+            hora_termino: "17:00",
+        },
+        {
+            programa: "Long Play de los Recuerdos",
+
+            hora_inicio: "18:00",
+            hora_termino: "20:00",
+        },
+        {
+            programa: "A 120 Por Hora",
+
+            hora_inicio: "21:00",
+            hora_termino: "23:30",
         }
     ],
     "Jueves": [
         {
-            programa: "Marcelita",
+            programa: "Matinal Paine Se Renueva",
 
-            hora_inicio: "00:00",
-            hora_termino: "12:00",
+            hora_inicio: "8:30",
+            hora_termino: "10:00",
+        },
+        {
+            programa: "La Radio Enseña",
+
+            hora_inicio: "10:00",
+            hora_termino: "10:30",
+        },
+        {
+            programa: "La Mañana Cristalina",
+
+            hora_inicio: "10:40",
+            hora_termino: "13:00",
+        },
+        {
+            programa: "Musica de los 80's",
+
+            hora_inicio: "13:00",
+            hora_termino: "13:30",
+        },
+        {
+            programa: "El Cantar de Nuestra Tierra",
+
+            hora_inicio: "13:30",
+            hora_termino: "14:00",
+        },
+        {
+            programa: "La Fiesta del Charro",
+
+            hora_inicio: "14:00",
+            hora_termino: "17:00",
+        },
+        {
+            programa: "Long Play de los Recuerdos",
+
+            hora_inicio: "18:00",
+            hora_termino: "20:00",
+        },
+        {
+            programa: "Salud Paine",
+
+            hora_inicio: "18:30",
+            hora_termino: "19:00",
+        },
+        {
+            programa: "A 120 Por Hora",
+
+            hora_inicio: "21:00",
+            hora_termino: "23:30",
         }
+    ],
+    "Viernes": [
+        {
+            programa: "Matinal Paine Se Renueva",
+
+            hora_inicio: "8:30",
+            hora_termino: "10:00",
+        },
+        {
+            programa: "La Radio Enseña",
+
+            hora_inicio: "10:00",
+            hora_termino: "10:30",
+        },
+        {
+            programa: "La Mañana Cristalina",
+
+            hora_inicio: "10:40",
+            hora_termino: "12:00",
+        },
+        {
+            programa: "Psicologia",
+
+            hora_inicio: "12:00",
+            hora_termino: "13:00",
+        },
+        {
+            programa: "Musica de los 80's",
+
+            hora_inicio: "13:00",
+            hora_termino: "13:30",
+        },
+        {
+            programa: "El Cantar de Nuestra Tierra",
+
+            hora_inicio: "13:30",
+            hora_termino: "14:00",
+        },
+        {
+            programa: "La Fiesta del Charro",
+
+            hora_inicio: "14:00",
+            hora_termino: "17:00",
+        },
+        {
+            programa: "Long Play de los Recuerdos",
+
+            hora_inicio: "18:00",
+            hora_termino: "20:00",
+        },
+        {
+            programa: "El Bailable de la 106.1",
+
+            hora_inicio: "21:30",
+            hora_termino: "24:00",
+        }
+    ],
+    "Sabado": [
+        {
+            programa: "Juntos Cuidemos Paine",
+
+            hora_inicio: "11:30",
+            hora_termino: "12:30",
+        },
+        {
+            programa: "El Bailable de la 106.1",
+
+            hora_inicio: "21:30",
+            hora_termino: "24:00",
+        },
+    ],
+    "Domingo": [
+        {
+            programa: "Golondrina en Domingo",
+
+            hora_inicio: "11:00",
+            hora_termino: "13:30",
+        },
     ]
 }
 

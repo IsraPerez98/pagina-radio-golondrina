@@ -48,6 +48,8 @@ class Programacion extends Component {
             const color_principal = info_programa.colores[0];
             //const color_secundario = info_programa.colores[1];
 
+            const color_texto = info_programa.color_texto;
+
             bloques.push(
                 <div className="bloque-programa" 
                     key={i} 
@@ -55,10 +57,10 @@ class Programacion extends Component {
                     //onClick={this.props.abrirModalPrograma(bloque_programa.programa, descripcion, color_principal, color_secundario )}
                     onClick={() => this.props.abrirModalPrograma(info_programa, bloque_programa)}
                 >
-                    <label className="horas-programa">
+                    <label className="horas-programa" style={{color: color_texto}}>
                         {bloque_programa.hora_inicio} - {bloque_programa.hora_termino}
                     </label>
-                    <label className="nombre-programa">{bloque_programa.programa}</label>
+                    <label className="nombre-programa" style={{color: color_texto}}>{bloque_programa.programa}</label>
                 </div>
             )
         }

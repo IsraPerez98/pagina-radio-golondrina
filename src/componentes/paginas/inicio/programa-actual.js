@@ -30,7 +30,9 @@ class ProgramaActual extends Component {
     }
 
     generarBloqueHorario(programa_actual) {
-        const titulo = programa_actual.bloque_programa.programa
+        const titulo = programa_actual.bloque_programa.programa;
+        const info_programa = programa_actual.programa;
+
         if(titulo === "Programacion Regular") {
             return(
                 <div className="bloque-horario">
@@ -42,7 +44,7 @@ class ProgramaActual extends Component {
             const hora_termino = programa_actual.bloque_programa.hora_termino;
 
             return(
-                <div className="bloque-horario">
+                <div className="bloque-horario" style={{info_programa: info_programa.color_texto}}>
                     <label className="encuentranos">Encuentranos todos los {this.diasSemana()}</label>
                     <label className="de">Desde las {hora_inicio} horas</label>
                     <label className="hasta">Hasta las {hora_termino} horas</label>
@@ -58,11 +60,12 @@ class ProgramaActual extends Component {
 
         const titulo = programa_actual.bloque_programa.programa;
 
+        const info_programa = programa_actual.programa;
+
         const color_principal = programa_actual.programa.colores[0];
         const color_secundario = programa_actual.programa.colores[1];
 
         const descripcion_programa = programa_actual.programa.descripcion;
-
 
         const bloque_horario = this.generarBloqueHorario(programa_actual);
 
@@ -73,12 +76,12 @@ class ProgramaActual extends Component {
                 </div>
                 <div className="bloque-programa" style={{backgroundColor: color_principal}}>
                     <div className="barra-titulo" style={{backgroundColor: color_secundario}}>
-                        <label className="titulo">{titulo}</label>
+                        <label className="titulo" style={{info_programa: info_programa.color_texto}}>{titulo}</label>
                     </div>
                     <div className="contenido-programa">
                         {bloque_horario}
                         <div className="bloque-descripcion-programa">
-                            <label className="descripcion-programa">{descripcion_programa}</label>
+                            <label className="descripcion-programa" style={{info_programa: info_programa.color_texto}}>{descripcion_programa}</label>
                         </div>
                     </div>
                 </div>
