@@ -55,7 +55,7 @@ $altura-fondo: calc( (17) * 120px );
                 display: flex;
                 flex-direction: column;
 
-                font-family: 'Roboto';
+                font-family: 'Open Sans';
 
                 -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
                 -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
@@ -146,10 +146,9 @@ $altura-fondo: calc( (17) * 120px );
 
                 .bloque-programa {
                     min-width: auto;
-                    min-height: none;
+                    min-height: 60px;
                     max-height: none;
-                    width: 100%;
-                    margin: 0px 0;
+                    width: calc(100% - 1px);
                     position: absolute;
                     height: 120px;
 
@@ -161,19 +160,22 @@ $altura-fondo: calc( (17) * 120px );
                     border-width: 1px;
                     border-color: #333333;
 
-                    margin: -2px;
+                    margin: -1px 0px -1px 0px;
 
                     .horas-programa {
-                        margin: 4px;
+                        margin: 0px 2px;
                         margin-bottom: 0px;
 
-                        font-size: 16px;
+                        font-size: 15px;
+                        font-weight: normal;
+                        
                     }
 
                     .nombre-programa {
-                        margin: 4px;
+                        margin: 0px 2px;
 
-                        font-size: 14px;
+                        font-size: 15px;
+                        font-weight: normal;
                     }
                 }
             }

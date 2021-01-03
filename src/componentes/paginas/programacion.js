@@ -33,6 +33,8 @@ class Programacion extends Component {
 
         const hora_base_min = 7 * 60; // 7 am
 
+        //const offset = 2; // offset para la posicion
+
         for(let i in horario_dia) {
             const bloque_programa = horario_dia[i];
 
@@ -41,7 +43,9 @@ class Programacion extends Component {
 
             const top = (hora_inicio_min - hora_base_min) * 2;
 
-            const altura = (hora_termino_min - hora_inicio_min) * 2; // (60 / 30) 30 pixeles por cada 30 minutos
+            const altura = (hora_termino_min - hora_inicio_min) * 2; // (60 / 30) 60 pixeles por cada 30 minutos
+
+            console.log(bloque_programa.programa," altura: ", altura, "horas: ", hora_inicio_min, hora_termino_min);
 
             const info_programa = programas[bloque_programa.programa];
             //const descripcion = info_programa.descripcion;
