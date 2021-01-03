@@ -11,6 +11,7 @@ import BarraInferior from './componentes/barra-inferior.js';
 import Inicio from './componentes/paginas/inicio/inicio';
 import Programacion from './componentes/paginas/programacion';
 import Contacto from './componentes/paginas/contacto';
+import Nosotros from './componentes/paginas/nosotros';
 
 import Programas from './programas';
 import ModalPrograma from './componentes/modal-programa';
@@ -110,6 +111,7 @@ class App extends Component {
 				/>
 				
 				<Route path="/contacto/" component={Contacto} />
+				<Route path="/nosotros/" component={Nosotros} />
 				<BarraInferior/>
 				<Reproductor
 					Programas={Programas}

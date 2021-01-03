@@ -14,6 +14,9 @@ class NavLinks extends Component {
                 <NavLink className="nav-link" to="/contacto/">
                     Contacto
                 </NavLink>
+                <NavLink className="nav-link" to="/nosotros/">
+                    Nosotros
+                </NavLink>
             </div>
         )
     }
