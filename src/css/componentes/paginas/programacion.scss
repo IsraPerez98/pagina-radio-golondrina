@@ -162,6 +162,16 @@ $altura-fondo: calc( (17) * 120px );
 
                     margin: -1px 0px -1px 0px;
 
+                    transition: .2s ease box-shadow, .2s ease transform;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        z-index: 1;
+                        margin: 0px 0px 2px 0px;
+                        border-width: 2px;
+                        border-style: solid;
+                    }
+
                     .horas-programa {
                         margin: 0px 2px;
                         margin-bottom: 0px;
