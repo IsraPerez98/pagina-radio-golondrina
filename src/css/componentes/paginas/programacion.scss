@@ -164,7 +164,9 @@ $altura-fondo: calc( (17) * 120px );
 
                     transition: .2s ease box-shadow, .2s ease transform;
 
-                    &:hover {
+                    z-index: 0;
+
+                    &:not(:focus):hover {
                         transform: scale(1.1);
                         z-index: 1;
                         margin: 0px 0px 2px 0px;

@@ -48,6 +48,8 @@ class ModalPrograma extends Component {
                     overlay: {
                         backgroundColor: "rgba(0,0,0,0.3)",
                         backdropFilter: "blur(5px)",
+                        position: "fixed",
+                        zIndex: "5",
                     },
                 }}
             >
