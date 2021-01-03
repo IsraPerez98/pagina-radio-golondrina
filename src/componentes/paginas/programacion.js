@@ -45,7 +45,7 @@ class Programacion extends Component {
 
             const altura = (hora_termino_min - hora_inicio_min) * 2; // (60 / 30) 60 pixeles por cada 30 minutos
 
-            console.log(bloque_programa.programa," altura: ", altura, "horas: ", hora_inicio_min, hora_termino_min);
+            //console.log(bloque_programa.programa," altura: ", altura, "horas: ", hora_inicio_min, hora_termino_min);
 
             const info_programa = programas[bloque_programa.programa];
             //const descripcion = info_programa.descripcion;
