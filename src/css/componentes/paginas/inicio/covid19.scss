@@ -15,7 +15,7 @@
         flex-direction: column;
         //background: rgba(0,0,0,0.2);
         background-color: #455a64;
-        padding: 10px 5px;
+        padding: 25px 5px;
 
         //@include sombra-derecha-abajo;
 
@@ -74,7 +74,8 @@
             }
             .texto {
                 margin: auto;
-                width: 20%;
+                width: 30%;
+                font-size: 1.4vw;
             }
         }
     }
