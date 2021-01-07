@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
 import Covid19 from './covid19';
-import ProgramaActual from "./programa-actual";
+import ProgramaActual from './programa-actual';
+import Facebook from './facebook';
 
 import '../../../css/componentes/paginas/inicio/inicio.scss';
 
@@ -15,6 +16,7 @@ class Inicio extends Component {
                 <ProgramaActual 
                     programa_actual={this.props.programa_actual}
                 />
+                <Facebook />
             </div>
         )
     }

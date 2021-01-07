@@ -1,0 +1,34 @@
+@import "../../../mixins";
+
+.facebook {
+    width: 100%;
+    margin-top: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+
+    @include sombra-derecha-abajo;
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .facebook-provider {
+        width: fit-content;
+        margin: auto;
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
+
+@media(min-width: 768px) {
+    .facebook {
+        flex-direction: row;
+        align-content: space-between;
+
+        .texto {
+            margin: auto;
+            font-size: 1.4vw;
+        }
+    }
+}
