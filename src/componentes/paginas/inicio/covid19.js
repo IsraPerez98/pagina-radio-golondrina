@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import ordenanza_mascarillas from '../../../img/covid19/ordenanza-mascarillas.png';
-import prevencion from '../../../img/covid19/prevencion.png';
+import ordenanza_mascarillas from '../../../img/covid19/ordenanza-mascarillas.webp';
+import prevencion from '../../../img/covid19/prevencion.webp';
 
 import '../../../css/componentes/paginas/inicio/covid19.scss';
 
