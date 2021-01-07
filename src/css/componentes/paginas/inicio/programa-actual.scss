@@ -4,11 +4,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    //height: 260px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     margin-top: 25px;
 
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #00000033;
 
     @include sombra-derecha-abajo;
 
@@ -62,9 +63,22 @@
 
 @media(min-width: 768px) {
     .programa-actual {
+
+        .bloque-suena-ahora {
+            .suena-ahora {
+                font-size: 2vw;
+            }
+        }
+        
         .bloque-programa {
             width: 80%;
             max-width: 800px;
+        }
+
+        .bloque-revisa-programacion {
+            .revisa-programacion{
+                font-size: 1.6vw;
+            }
         }
     }
 }
