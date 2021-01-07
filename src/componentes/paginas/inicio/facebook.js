@@ -7,7 +7,7 @@ class Facebook extends Component {
 
     render() {
         return (
-            <div className="facebook">
+            <div className="bloque-facebook">
                 <div className="texto">
                     <h3>Entérate de nuestras novedades
                         <br/>Ve tus programas favoritos en vivo
