@@ -1,4 +1,5 @@
 const programas = {
+    /*
     "Matinal Paine Se Renueva": {
         descripcion : "Programa orientado a informar a la comunidad Painina de las últimas noticias locales, nacionales e internacionales, ademas de entretener y motivar las mañanas de los auditores, conducido por Rodrigo Contreras, Concejal",
         colores : ["#880e4f", "#560027"],
@@ -9,36 +10,38 @@ const programas = {
         colores: ["#c51162","#8e0038"],
         color_texto: ["#ffffff"],
     },
+    */
     "La Mañana Cristalina" : {
-        descripcion: "",
+        descripcion: "Programa misceláneo informativo, cultural y musical conducido por Marcela Berrios.",
         colores: ["#ff8f00", "#c56000"],
         color_texto: ["#000000"],
     },
     "Musica de los 80's" : {
-        descripcion: "",
+        descripcion: "Solo éxitos de los 80s.",
         colores: ["#1a237e","#000051"],
         color_texto: ["#ffffff"],
     },
     "El Cantar de Nuestra Tierra" : {
-        descripcion: "",
+        descripcion: "Nuestras raíces y tradiciones expresadas a través de música folclórica.",
         colores: ["#6d4c41", "#40241a"],
         color_texto: ["#ffffff"],
     },
     "La Fiesta del Charro" : {
-        descripcion: "",
+        descripcion: "Programa de entretención interactivo de cumbias y rancheras conducido por el Charro Incognito.",
         colores: ["#64dd17", "#1faa00"],
         color_texto: ["#000000"],
     },
     "Long Play de los Recuerdos" : {
-        descripcion: "",
+        descripcion: "Exitos del ayer de la década de los 50s 60s 70s y 80s conducido por Marcela Berrios.",
         colores: ["#00796b", "#004c40"],
         color_texto: ["#ffffff"],
     },
     "A 120 Por Hora" : {
-        descripcion: "",
+        descripcion: "Programa de entretención interactivo con música diversa conducido por DJ Chamorro.",
         colores: ["#2e7d32","#005005"],
         color_texto: ["#ffffff"],
     },
+    /*
     "Salud Paine" : {
         descripcion: "",
         colores: ["#29b6f6","#0086c3"],
@@ -59,13 +62,14 @@ const programas = {
         colores: ["#00796b","#004c40"],
         color_texto: ["#ffffff"],
     },
+    */
     "El Bailable de la 106.1" : {
-        descripcion: "",
+        descripcion: "Programa interactivo con música bailable para acompañar tu fin de semana, conducido por DJ Chamorro.",
         colores: ["#00796b","#004c40"],
         color_texto: ["#ffffff"],
     },
     "Golondrina en Domingo" : {
-        descripcion: "",
+        descripcion: "Programa interactivo musical e informativo conducido por DJ Chamorro. ",
         colores: ["#b71c1c","#7f0000"],
         color_texto: ["#ffffff"],
     },
@@ -74,7 +78,7 @@ const programas = {
         colores: ["#00796b","#004c40"],
     },
     "Programacion Regular" : {
-        descripcion: "",
+        descripcion: "Música variada para entretenerte las 24 horas del día.",
         colores: ["#01579b","#002f6c"],
         color_texto: ["#ffffff"],
     }
@@ -82,6 +86,7 @@ const programas = {
 
 const horario = {
     "Lunes": [
+        /*
         {
             programa: "Matinal Paine Se Renueva",
 
@@ -94,6 +99,7 @@ const horario = {
             hora_inicio: "10:00",
             hora_termino: "10:30",
         },
+        */
         {
             programa: "La Mañana Cristalina",
 
@@ -133,6 +139,7 @@ const horario = {
 
     ],
     "Martes": [
+        /*
         {
             programa: "Matinal Paine Se Renueva",
 
@@ -145,18 +152,21 @@ const horario = {
             hora_inicio: "10:00",
             hora_termino: "10:30",
         },
+        */
         {
             programa: "La Mañana Cristalina",
 
             hora_inicio: "10:40",
             hora_termino: "12:00",
         },
+        /*
         {
             programa: "Con Peras y Manzanas",
 
             hora_inicio: "12:00",
             hora_termino: "13:00",
         },
+        */
         {
             programa: "Musica de los 80's",
 
@@ -181,12 +191,14 @@ const horario = {
             hora_inicio: "18:00",
             hora_termino: "19:00",
         },
+        /*
         {
             programa: "Juntos Cuidemos Paine",
 
             hora_inicio: "19:00",
             hora_termino: "20:00",
         },
+        */
         {
             programa: "A 120 Por Hora",
 
@@ -195,6 +207,7 @@ const horario = {
         }
     ],
     "Miercoles": [
+        /*
         {
             programa: "Matinal Paine Se Renueva",
 
@@ -207,18 +220,21 @@ const horario = {
             hora_inicio: "10:00",
             hora_termino: "10:30",
         },
+        */
         {
             programa: "La Mañana Cristalina",
 
             hora_inicio: "10:40",
             hora_termino: "12:30",
         },
+        /*
         {
             programa: "Pasadito las 12",
 
             hora_inicio: "12:30",
             hora_termino: "13:30",
         },
+        */
         {
             programa: "El Cantar de Nuestra Tierra",
 
@@ -245,6 +261,7 @@ const horario = {
         }
     ],
     "Jueves": [
+        /*
         {
             programa: "Matinal Paine Se Renueva",
 
@@ -257,6 +274,7 @@ const horario = {
             hora_inicio: "10:00",
             hora_termino: "10:30",
         },
+        */
         {
             programa: "La Mañana Cristalina",
 
@@ -287,12 +305,14 @@ const horario = {
             hora_inicio: "18:00",
             hora_termino: "20:00",
         },
+        /*
         {
             programa: "Salud Paine",
 
             hora_inicio: "18:30",
             hora_termino: "19:00",
         },
+        */
         {
             programa: "A 120 Por Hora",
 
@@ -301,6 +321,7 @@ const horario = {
         }
     ],
     "Viernes": [
+        /*
         {
             programa: "Matinal Paine Se Renueva",
 
@@ -313,18 +334,21 @@ const horario = {
             hora_inicio: "10:00",
             hora_termino: "10:30",
         },
+        */
         {
             programa: "La Mañana Cristalina",
 
             hora_inicio: "10:40",
             hora_termino: "12:00",
         },
+        /*
         {
             programa: "Psicologia",
 
             hora_inicio: "12:00",
             hora_termino: "13:00",
         },
+        */
         {
             programa: "Musica de los 80's",
 
@@ -357,12 +381,14 @@ const horario = {
         }
     ],
     "Sabado": [
+        /*
         {
             programa: "Juntos Cuidemos Paine",
 
             hora_inicio: "11:30",
             hora_termino: "12:30",
         },
+        */
         {
             programa: "El Bailable de la 106.1",
 
