@@ -81,7 +81,12 @@ const programas = {
         descripcion: "Música variada para entretenerte las 24 horas del día.",
         colores: ["#01579b","#002f6c"],
         color_texto: ["#ffffff"],
-    }
+    },
+    "Golondrina 80s" : {
+        descripcion: "Solo éxitos de los años 80s",
+        colores: ["#3f51b5","#2196f3"],
+        color_texto: ["#ffffff"],
+    },
 }
 
 const horario = {
