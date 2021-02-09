@@ -14,7 +14,7 @@ class Inicio extends Component {
             <div className="pagina-inicio">
                 <Covid19 />
                 <ProgramaActual 
-                    programa_actual={this.props.programa_actual}
+                    programa_actual={programa_actual}
                 />
                 <Facebook />
             </div>
