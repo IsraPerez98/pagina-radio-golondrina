@@ -10,8 +10,8 @@ class Programacion extends Component {
         const { Programas } = this.props;
 
         this.state = {
-            programas: this.props.Programas.getProgramas(),
-            horario: this.props.Programas.getHorario(),
+            programas: Programas.getProgramas(),
+            horario: Programas.getHorario(),
         }
 
         this.generarBloquesDia = this.generarBloquesDia.bind(this);
