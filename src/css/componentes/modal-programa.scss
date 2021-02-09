@@ -12,11 +12,6 @@
     &:focus {
         outline:0;
     }
-
-    .bloque-programa {
-        height: 100%;
-        @include dialogo-programa;
-    }
 }
 
 @media(min-width: 768px) {

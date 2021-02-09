@@ -1,0 +1,23 @@
+@import "../mixins";
+
+.bloque-programa {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    //height: 200px;
+    display: flex;
+    flex-direction: column;
+
+    @include sombra-derecha-abajo;
+
+    //max-width: 320px;
+
+    @include dialogo-programa; // _mixins
+}
+
+@media(min-width: 768px) {
+    .bloque-programa {
+        //width: 80%;
+        max-width: 800px;
+    }
+}

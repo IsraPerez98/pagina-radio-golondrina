@@ -3,6 +3,7 @@ import Modal from "react-modal";
 
 import "../css/componentes/modal-programa.scss";
 
+import InformacionPrograma from './informacion-programa';
 
 class ModalPrograma extends Component {
 
@@ -49,6 +50,12 @@ class ModalPrograma extends Component {
                     },
                 }}
             >
+                <InformacionPrograma
+                    info_programa = {info_programa}
+                    bloque_programa = {bloque_programa}
+                    funcion_cerrar = {cerrarModalPrograma}
+                />
+                {/*
                 <div className="bloque-programa">
                     <div className="barra-titulo" style={{backgroundColor: info_programa.colores[1]}}>
                         <label className="titulo" style={{color: info_programa.color_texto}} >{bloque_programa.programa}</label>
@@ -65,6 +72,7 @@ class ModalPrograma extends Component {
                         </div>
                     </div>
                 </div>
+                */}
             </Modal>
         );
     }

@@ -24,19 +24,9 @@
         }
     }
 
-    .bloque-programa {
-        margin: auto;
+    .div-info-programa {
         width: 95%;
-        //height: 200px;
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-
-        @include sombra-derecha-abajo;
-
-        max-width: 320px;
-
-        @include dialogo-programa; // _mixins
+        margin: 10px auto;
     }
 
 
@@ -68,11 +58,6 @@
             .suena-ahora {
                 font-size: 2vw;
             }
-        }
-        
-        .bloque-programa {
-            width: 80%;
-            max-width: 800px;
         }
 
         .bloque-revisa-programacion {
