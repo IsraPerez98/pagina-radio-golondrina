@@ -11,11 +11,15 @@ class Nosotros extends Component {
                 </div>
                 <div className="nuestra-mision">
                     <h2>- Nuestra Misión -</h2>
-                    <span>texto</span>
+                    <span>
+                        Nos destacamos por nuestra labor social informativa, fundamentamos en los valores de diversidad cultural, inclusión, convivencia democrática, libertad de expresión, responsabilidad y ética informativa para el Paine actual y del Futuro y su audiencia. Somos una herramienta democratizadora en su más amplio significado que busca servir a la sociedad en la promoción de una comunidad informada y acompañada en todo momento.
+                    </span>
                 </div>
                 <div className="quienes-somos">
                     <h2>- Quiénes Somos -</h2>
-                    <span>texto</span>
+                    <span>
+                    Radio Golondrina Paine es una emisora de servicio público, con especial énfasis en el aspecto cultural, educativo y también de sana entretención con transmisión las 24 horas del día.
+                    </span>
                 </div>
                 <div className="ubicacion">
                     <span>Nuestros estudios estan ubicados en Av. Pdte. Prieto 0380, Paine, Región Metropolitana</span>

@@ -5,11 +5,6 @@ import "../css/componentes/modal-programa.scss";
 
 
 class ModalPrograma extends Component {
-    /* se le pasa this.props.abierto (true,false)
-        this.props.bloque_programa
-        this.props.info_programa
-        this.props.cerrarModalPrograma()
-    */
 
     componentDidMount() {
         Modal.setAppElement(document.getElementById('root'));
@@ -32,8 +27,9 @@ class ModalPrograma extends Component {
     }
 
     render() {
-        const info_programa = this.props.info_programa;
-        const bloque_programa = this.props.bloque_programa;
+        const {info_programa, bloque_programa, cerrarModalPrograma, abierto} = this.props;
+        //const info_programa = this.props.info_programa;
+        //const bloque_programa = this.props.bloque_programa;
 
         if(!(info_programa)) return (<div></div>);
         if(!(bloque_programa)) return (<div></div>);
@@ -41,9 +37,9 @@ class ModalPrograma extends Component {
         return (
             <Modal 
                 className="modal-programa" 
-                onRequestClose={this.props.cerrarModalPrograma}
+                onRequestClose={cerrarModalPrograma}
                 shouldCloseOnOverlayClick={true}
-                isOpen={this.props.abierto}
+                isOpen={abierto}
                 style={{
                     overlay: {
                         backgroundColor: "rgba(0,0,0,0.3)",
@@ -56,7 +52,7 @@ class ModalPrograma extends Component {
                 <div className="bloque-programa">
                     <div className="barra-titulo" style={{backgroundColor: info_programa.colores[1]}}>
                         <label className="titulo" style={{color: info_programa.color_texto}} >{bloque_programa.programa}</label>
-                        <button className="boton-cerrar" onClick={this.props.cerrarModalPrograma}>X</button>
+                        <button className="boton-cerrar" onClick={cerrarModalPrograma}>X</button>
                     </div>
                     <div className="contenido-programa" style={{backgroundColor: info_programa.colores[0]}}>
                         <div className="bloque-horario" style={{color: info_programa.color_texto}}>

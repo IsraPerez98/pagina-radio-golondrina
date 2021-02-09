@@ -4,11 +4,10 @@ import { NavLink } from "react-router-dom";
 import '../../../css/componentes/paginas/inicio/programa-actual.scss';
 
 class ProgramaActual extends Component {
-    // se le pasa this.props.programa_actual
 
     constructor(props) {
         super(props);
-
+        
         this.diasSemana = this.diasSemana.bind(this);
         this.generarBloqueHorario = this.generarBloqueHorario.bind(this);
     }
@@ -54,9 +53,9 @@ class ProgramaActual extends Component {
     }
 
     render() {
-        const programa_actual = this.props.programa_actual;
+        const { programa_actual } = this.props;
 
-        console.log({programa_actual});
+        //console.log({programa_actual});
 
         const titulo = programa_actual.bloque_programa.programa;
 

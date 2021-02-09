@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import "../css/componentes/reproductor.scss";
 
 class Reproductor extends Component {
-    // se le pasa this.props.programa_actual
 
     constructor(props) {
         super(props);
@@ -56,7 +55,7 @@ class Reproductor extends Component {
     }
 
     clickNombrePrograma() {
-        const programa_actual = this.props.programa_actual;
+        const { programa_actual } = this.props;
 
         const info_programa = programa_actual.programa;
         const bloque_programa = programa_actual.bloque_programa;
@@ -69,7 +68,8 @@ class Reproductor extends Component {
     }
 
     render() {
-        const programa_actual = this.props.programa_actual;
+        const { programa_actual } = this.props;
+        //const programa_actual = this.props.programa_actual;
         const nombre_programa = programa_actual.bloque_programa.programa;
         const colores_programa = programa_actual.programa.colores;
 

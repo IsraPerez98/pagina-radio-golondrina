@@ -7,9 +7,9 @@ import Facebook from './facebook';
 import '../../../css/componentes/paginas/inicio/inicio.scss';
 
 class Inicio extends Component {
-    //se le pasa this.props.programa_actual
 
     render() {
+        const { programa_actual } = this.props;
         return(
             <div className="pagina-inicio">
                 <Covid19 />

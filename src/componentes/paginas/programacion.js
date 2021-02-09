@@ -3,10 +3,11 @@ import React, {Component} from 'react';
 import '../../css/componentes/paginas/programacion.scss';
 
 class Programacion extends Component {
-    // se le pasa this.props.Programas
 
     constructor(props) {
         super(props);
+
+        const { Programas } = this.props;
 
         this.state = {
             programas: this.props.Programas.getProgramas(),
@@ -22,7 +23,8 @@ class Programacion extends Component {
     }
     
     generarBloquesDia(dia) {
-        const Programas = this.props.Programas; // import de programas.js
+        const { Programas, abrirModalPrograma } = this.props;
+        //const Programas = this.props.Programas; // import de programas.js
         
         const programas = this.state.programas; // objeto con la lista de programas, nombre, descripcion, colores
         const horario = this.state.horario;
@@ -59,7 +61,7 @@ class Programacion extends Component {
                     key={i} 
                     style={{top: top, height: altura, backgroundColor: color_principal}}
                     //onClick={this.props.abrirModalPrograma(bloque_programa.programa, descripcion, color_principal, color_secundario )}
-                    onClick={() => this.props.abrirModalPrograma(info_programa, bloque_programa)}
+                    onClick={() => abrirModalPrograma(info_programa, bloque_programa)}
                 >
                     <label className="horas-programa" style={{color: color_texto}}>
                         {bloque_programa.hora_inicio} - {bloque_programa.hora_termino}
