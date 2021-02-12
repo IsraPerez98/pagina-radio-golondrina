@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
+import ScrollIntoView from '../../ScrollIntoView';
+
 import '../../../css/componentes/paginas/inicio/programa-actual.scss';
 
 import InformacionPrograma from '../../informacion-programa';
@@ -27,7 +29,7 @@ class ProgramaActual extends Component {
                     </div>
                 <div className="bloque-revisa-programacion">
                     <label className="revisa-programacion">
-                        Revisa nuestra programacion completa en <NavLink className="nav-link" to="/programacion/">Programacion</NavLink>
+                        Revisa nuestra programacion completa en <ScrollIntoView><NavLink className="nav-link" to="/programacion/">Programacion</NavLink></ScrollIntoView>
                     </label>
                 </div>
             </div>
