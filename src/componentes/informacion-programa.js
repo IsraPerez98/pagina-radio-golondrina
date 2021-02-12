@@ -59,7 +59,7 @@ class InformacionPrograma extends Component {
         const bloque_horario = this.generarBloqueHorario(info_programa, bloque_programa);
 
         return (
-            <div className="bloque-programa" style={{ backgroundColor: color_principal }}>
+            <div className="bloque-programa" style={{ background: `linear-gradient(90deg, ${color_secundario}, 70% , ${color_principal})`}}>
                 <div className="barra-titulo" style={{ backgroundColor: color_secundario }}>
                     <label className="titulo" style={{ info_programa: info_programa.color_texto }}>{titulo}</label>
                     {funcion_cerrar && <button className="boton-cerrar" onClick={funcion_cerrar}>X</button>}
