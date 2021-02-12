@@ -34,6 +34,7 @@ class Covid19 extends Component {
                         Para mas informacion acerca del uso obligatorio de mascarillas consulta la pagina oficial de nuestra municipalidad <span>paine.cl</span> 
                     </label>
                 </div>
+                {/*
                 <div 
                     className="bloque-covid19 autocuidado"
                 >
@@ -50,6 +51,7 @@ class Covid19 extends Component {
                         Para mas informacion acerca de esta y mas medidas de autocuidado revisa el sitio oficial del Gobierno de Chile <span>https://www.gob.cl/coronavirus/autocuidado/</span>
                     </label>
                 </div>
+                */}
             </div>
         )
     }
